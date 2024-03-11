@@ -8,6 +8,7 @@ import numpy as np
 i = 1
 service_active = True
 drones = []
+drones_names = []
 
 class MinimalService(Node):
 
@@ -23,6 +24,7 @@ class MinimalService(Node):
                         request.speed, request.tof, request.ancho_de_barrido, request.coordx, request.coordy))
         
         drones.append([request.coordx, request.coordy, request.ancho_de_barrido, request.speed, request.tof])
+        drones_names.append(request.drone_id)
 
         i = i-1
         if i == 0:
@@ -31,9 +33,9 @@ class MinimalService(Node):
 
 class MinimalClient(Node):
 
-    def __init__(self, waypoints):
+    def __init__(self, drone_id, waypoints):
         super().__init__('minimal_client')
-        self.client = self.create_client(Waypoints, 'my_drone_service')
+        self.client = self.create_client(Waypoints, f'{drone_id}_service')
         self.waypoints = waypoints
         while not self.client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('service not available, waiting again...')
@@ -60,13 +62,16 @@ def main():
     print(drones)
     minimal_service.destroy_node()
 
-    minimal_client = MinimalClient(wps[0])
-    cli_response = minimal_client.send_request()
-    minimal_client.get_logger().info(
-        'Result of add_two_ints: for %d + %d = %d' %
-        (12.3, 50.2, cli_response.ready))
+    index = 0
+    for drone_wps in wps:
+        minimal_client = MinimalClient(drones_names[index], drone_wps)
+        cli_response = minimal_client.send_request()
+        minimal_client.get_logger().info(
+            'Result of add_two_ints: for %d + %d = %d' %
+            (12.3, 50.2, cli_response.ready))
 
-    minimal_client.destroy_node()
+        minimal_client.destroy_node()
+        index = index+1
 
     rclpy.shutdown()
 
