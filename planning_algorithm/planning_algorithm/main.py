@@ -96,6 +96,8 @@ def verdugo(drones):
     draw_final_plans(coords_list,convex_limits,waypoint_list)
     print("Elapsed time:",(end-start))
 
+    return waypoint_list
+
 
 if __name__ == '__main__':
     UAVs = [[-200.0, 0.0, 20.0, 30.0, 48.0], [-200.0, 0.0, 10.0, 40.0, 41.0], [-200.0, 0.0, 15.0, 20.0, 81.0], [-200.0, 0.0, 5.0, 10.0, 56.0]]

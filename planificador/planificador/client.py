@@ -1,6 +1,8 @@
 import rclpy
 from rclpy.node import Node
-from syst_msgs.srv import AdvService
+from syst_msgs.srv import AdvService, Waypoints
+
+import numpy as np
 
 class MinimalClientAsync(Node):
 
@@ -22,6 +24,20 @@ class MinimalClientAsync(Node):
         rclpy.spin_until_future_complete(self, self.future)
         return self.future.result()
 
+class MinimalServer(Node):
+
+    def __init__(self, dname: str):
+        super().__init__('minimal_server_async')
+        self.srv = self.create_service(Waypoints, f'{dname}_service', self.receive_wps_callback)
+    
+    def receive_wps_callback(self, request, response):
+        wps_array = np.array(request.wps, dtype=np.float64).reshape((int)(len(request.wps)/2), 2)
+        self.get_logger().info('data received')
+        
+        print(wps_array)
+
+        response.ready = 1
+        return response
 
 def main():
     rclpy.init()
@@ -33,8 +49,12 @@ def main():
         (12.3, 50.2, response.response))
 
     minimal_client.destroy_node()
-    rclpy.shutdown()
+    
+    minimal_server = MinimalServer('my_drone')
+    rclpy.spin(minimal_server)
+    minimal_server.destroy_node()
 
+    rclpy.shutdown()
 
 if __name__ == '__main__':
     main()
