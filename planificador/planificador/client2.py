@@ -14,7 +14,7 @@ class MinimalClientAsync(Node):
         self.req = AdvService.Request()
 
     def send_request(self):
-        self.req.drone_id = "my_drone"
+        self.req.drone_id = "my_drone2"
         self.req.speed = 12.3
         self.req.tof = 50.2
         self.req.ancho_de_barrido = 33.0
@@ -55,7 +55,7 @@ def main():
 
     minimal_client.destroy_node()
     
-    minimal_server = MinimalServer('my_drone')
+    minimal_server = MinimalServer('my_drone2')
     while not is_server_done:
         rclpy.spin_once(minimal_server)
     minimal_server.destroy_node()

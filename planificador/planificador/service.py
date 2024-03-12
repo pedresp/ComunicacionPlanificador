@@ -5,7 +5,7 @@ from rclpy.node import Node
 from planning_algorithm.main import verdugo
 import numpy as np
 
-i = 1
+i = 2
 service_active = True
 drones = []
 drones_names = []
@@ -14,7 +14,7 @@ class MinimalService(Node):
 
     def __init__(self):
         super().__init__('minimal_service')
-        self.srv = self.create_service(AdvService, 'add_two_ints', self.add_two_ints_callback)
+        self.srv = self.create_service(AdvService, 'adv_service', self.add_two_ints_callback)
 
     def add_two_ints_callback(self, request, response):
         global service_active, drones, i
@@ -43,7 +43,7 @@ class MinimalClient(Node):
 
     def send_request(self):
         #np_array = np.array([[1.0, 2.0, 3.0, 4.0], [21.0, 3.0, 4.0, 5.0]], dtype=float)
-        np_array = self.waypoints[0]
+        np_array = self.waypoints
         self.req.wps = np_array.flatten().tolist()
         self.future = self.client.call_async(self.req)
         rclpy.spin_until_future_complete(self, self.future)
@@ -63,12 +63,14 @@ def main():
     minimal_service.destroy_node()
 
     index = 0
-    for drone_wps in wps:
+    print("waypoints")
+    print(wps)
+    for drone_wps in wps[0]:
         minimal_client = MinimalClient(drones_names[index], drone_wps)
         cli_response = minimal_client.send_request()
         minimal_client.get_logger().info(
-            'Result of add_two_ints: for %d + %d = %d' %
-            (12.3, 50.2, cli_response.ready))
+            'Is ready ? %d' %
+            (cli_response.ready))
 
         minimal_client.destroy_node()
         index = index+1
