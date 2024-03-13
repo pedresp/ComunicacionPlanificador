@@ -66,6 +66,7 @@ def main():
     print("waypoints")
     print(wps)
     for drone_wps in wps[0]:
+        print(i)
         minimal_client = MinimalClient(drones_names[index], drone_wps)
         cli_response = minimal_client.send_request()
         minimal_client.get_logger().info(

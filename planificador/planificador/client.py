@@ -4,6 +4,7 @@ from syst_msgs.srv import AdvService, Waypoints
 
 import numpy as np
 
+drone_id = ''
 class MinimalClientAsync(Node):
 
     def __init__(self):
@@ -14,12 +15,15 @@ class MinimalClientAsync(Node):
         self.req = AdvService.Request()
 
     def send_request(self):
-        self.req.drone_id = "my_drone"
-        self.req.speed = 12.3
-        self.req.tof = 50.2
-        self.req.ancho_de_barrido = 33.0
-        self.req.coordx = -200.0
-        self.req.coordy = 0.0
+        global drone_id
+        drone_id = self.declare_parameter('drone_id', 'drone_x').get_parameter_value().string_value
+
+        self.req.drone_id = drone_id
+        self.req.speed = self.declare_parameter('speed', 30.0).get_parameter_value().double_value
+        self.req.tof = self.declare_parameter('tof', 50.0).get_parameter_value().double_value
+        self.req.ancho_de_barrido = self.declare_parameter('ancho_de_barrido', 33.0).get_parameter_value().double_value
+        self.req.coordx = self.declare_parameter('coordx', -200.0).get_parameter_value().double_value
+        self.req.coordy = self.declare_parameter('coordy', 0.0).get_parameter_value().double_value
         self.future = self.cli.call_async(self.req)
         rclpy.spin_until_future_complete(self, self.future)
         return self.future.result()
@@ -35,9 +39,9 @@ class MinimalServer(Node):
     def receive_wps_callback(self, request, response):
         global is_server_done
         wps_array = np.array(request.wps, dtype=np.float64).reshape((int)(len(request.wps)/2), 2)
-        self.get_logger().info('data received')
+        self.get_logger().info(f'data received {wps_array}')
         
-        print(wps_array)
+        #print(wps_array)
         #print(f'las coord son {wps_array[0][0]} : {wps_array[0][1]}')
 
         response.ready = 1
@@ -55,7 +59,7 @@ def main():
 
     minimal_client.destroy_node()
     
-    minimal_server = MinimalServer('my_drone')
+    minimal_server = MinimalServer(drone_id)
     while not is_server_done:
         rclpy.spin_once(minimal_server)
     minimal_server.destroy_node()
