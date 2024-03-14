@@ -3,12 +3,12 @@ import rclpy
 from rclpy.node import Node
 
 from planning_algorithm.main import verdugo
-import numpy as np
+from .wps_processation_tools import *
 
-i = 2
+i = 3
 service_active = True
 drones = []
-drones_names = []
+wps_metadata = WPS_metadata()
 
 class MinimalService(Node):
 
@@ -17,14 +17,14 @@ class MinimalService(Node):
         self.srv = self.create_service(AdvService, 'adv_service', self.add_two_ints_callback)
 
     def add_two_ints_callback(self, request, response):
-        global service_active, drones, i
+        global service_active, drones, i, wps_metadata
 
         response.response = request.tof + request.speed
         self.get_logger().info('Incoming request\ndrone_id: %s speed: %d tof: %d ancho_de_barrido: %d\ncoordx: %d, coordy: %d' % (request.drone_id, \
                         request.speed, request.tof, request.ancho_de_barrido, request.coordx, request.coordy))
         
         drones.append([request.coordx, request.coordy, request.ancho_de_barrido, request.speed, request.tof])
-        drones_names.append(request.drone_id)
+        wps_metadata.add_drone(request.drone_id, request.ancho_de_barrido)
 
         i = i-1
         if i == 0:
@@ -58,23 +58,27 @@ def main():
         rclpy.spin_once(minimal_service)
 
     wps = verdugo(drones)
-
     print(drones)
+
     minimal_service.destroy_node()
 
     index = 0
     print("waypoints")
     print(wps)
-    for drone_wps in wps[0]:
-        print(i)
-        minimal_client = MinimalClient(drones_names[index], drone_wps)
-        cli_response = minimal_client.send_request()
-        minimal_client.get_logger().info(
-            'Is ready ? %d' %
-            (cli_response.ready))
 
-        minimal_client.destroy_node()
-        index = index+1
+    drones_names = wps_metadata.flatten()
+    proccesed_wps = process_wps(wps, 8.0)
+
+    for list_array_2d in proccesed_wps:
+        for array_2d in list_array_2d:
+            minimal_client = MinimalClient(drones_names[index], array_2d)
+            cli_response = minimal_client.send_request()
+            minimal_client.get_logger().info(
+                'Is ready ? %d' % (cli_response.ready)
+            )
+
+            minimal_client.destroy_node()
+            index = index + 1
 
     rclpy.shutdown()
 

@@ -34,7 +34,7 @@ class MinimalServer(Node):
     
     def receive_wps_callback(self, request, response):
         global is_server_done
-        wps_array = np.array(request.wps, dtype=np.float64).reshape((int)(len(request.wps)/2), 2)
+        wps_array = np.array(request.wps, dtype=np.float64).reshape((int)(len(request.wps)/3), 3)
         self.get_logger().info('data received')
         
         print(wps_array)
