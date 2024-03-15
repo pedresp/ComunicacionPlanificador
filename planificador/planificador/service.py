@@ -5,7 +5,8 @@ from rclpy.node import Node
 from planning_algorithm.main import verdugo
 from .wps_processation_tools import *
 
-i = 3
+i = 0
+flight_height = 0
 service_active = True
 drones = []
 wps_metadata = WPS_metadata()
@@ -14,6 +15,10 @@ class MinimalService(Node):
 
     def __init__(self):
         super().__init__('minimal_service')
+        
+        global i, flight_height
+        i = self.declare_parameter('drones_quantity', 0.0).get_parameter_value().double_value
+        flight_height = self.declare_parameter('flight_height', 0.0).get_parameter_value().double_value
         self.srv = self.create_service(AdvService, 'adv_service', self.add_two_ints_callback)
 
     def add_two_ints_callback(self, request, response):
@@ -66,8 +71,10 @@ def main():
     print("waypoints")
     print(wps)
 
+    global flight_height
+
     drones_names = wps_metadata.flatten()
-    proccesed_wps = process_wps(wps, 8.0)
+    proccesed_wps = process_wps(wps, flight_height)
 
     for list_array_2d in proccesed_wps:
         for array_2d in list_array_2d:
