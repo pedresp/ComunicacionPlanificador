@@ -32,11 +32,25 @@ def generate_launch_description():
         ),
 
         Node(
+            package='planificador',
+            executable='client',
+            name='drone_2',
+            parameters=[
+                {'drone_id': 'drone_2'},
+                {'speed': 20.0},
+                {'tof': 52.2},
+                {'ancho_de_barrido': 13.0},
+                {'coordx': -200.0},
+                {'coordy': 0.0}
+            ]
+        ),
+
+        Node(
           package='planificador',
           executable='server',
           name='server1',
           parameters=[
-              {'drones_quantity': 2.0},
+              {'drones_quantity': 3.0},
               {'flight_height': 8.0}
           ]  
         )

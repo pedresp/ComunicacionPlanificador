@@ -22,6 +22,9 @@ from .spiral import *
 from .back_and_forth import *
 
 from .readcsv import readUAV
+import yaml
+import rospkg
+import os
 
 # opening the 'csv' file for testing
 
@@ -34,16 +37,21 @@ from .readcsv import readUAV
 #    UAVs = []
 #    for row in reader:
 #        UAVs.append(row[:])
-def verdugo(drones):
+def verdugo(drones, path_to_area_coord: str):
     #UAVs = readUAV()
     UAVs = drones
 
     #Initial parameters
-    polygon_sides=6
+    # changed and commented loc to allow points selection from a yaml file
+    perimeter = {}
+    with open(path_to_area_coord, 'r') as file:
+        perimeter = yaml.safe_load(file)
+    #polygon_sides=6
     wpt_separation=10
-
+    print("el perimetro es:", perimeter)
     print('Select the points for this area:')
-    limits,x,y=get_polygon(polygon_sides)
+    #limits,x,y=get_polygon(polygon_sides)
+    limits,x,y=get_polygon2(perimeter['areas'][0]['area']['coords'])
 
     convex_limits=convex_hull_fun(limits)
 
@@ -101,4 +109,4 @@ def verdugo(drones):
 
 if __name__ == '__main__':
     UAVs = [[-200.0, 0.0, 20.0, 30.0, 48.0], [-200.0, 0.0, 10.0, 40.0, 41.0], [-200.0, 0.0, 15.0, 20.0, 81.0], [-200.0, 0.0, 5.0, 10.0, 56.0]]
-    verdugo(UAVs)
+    #verdugo(UAVs)

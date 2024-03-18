@@ -40,7 +40,13 @@ def get_polygon(number_of_sides):
     y=limit_points[:,1]
     return limit_points,x,y
 
-
+def get_polygon2(points_collection):
+    limit_points=np.empty((0,2))
+    for point in points_collection:
+        limit_points=np.append(limit_points, [[point['x'], point['y']]], axis=0)
+    x=limit_points[:,0]
+    y=limit_points[:,1]
+    return limit_points,x,y
 
 def draw_polygons(polygon_list):
 
