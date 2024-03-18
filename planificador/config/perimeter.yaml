@@ -1,0 +1,11 @@
+areas:
+  - area:
+      coords:
+        - x: -79
+          y: 110
+        - x: 53
+          y: 104
+        - x: 77
+          y: -26
+        - x: 11
+          y: -90 #con 86 revienta el algoritmo

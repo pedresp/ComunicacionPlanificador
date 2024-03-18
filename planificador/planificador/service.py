@@ -5,6 +5,8 @@ from rclpy.node import Node
 from planning_algorithm.main import verdugo
 from .wps_processation_tools import *
 
+import os
+
 i = 0
 flight_height = 0
 service_active = True
@@ -62,7 +64,7 @@ def main():
     while service_active:
         rclpy.spin_once(minimal_service)
 
-    wps = verdugo(drones)
+    wps = verdugo(drones, os.path.join(os.getcwd(), 'install/planificador/share/planificador/config/perimeter.yaml'))
     print(drones)
 
     minimal_service.destroy_node()
