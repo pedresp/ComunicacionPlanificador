@@ -1,6 +1,0 @@
-string drone_id
-float64 speed
-float64 tof
-float64 ancho_de_barrido
-float64 coordx
-float64 coordy
