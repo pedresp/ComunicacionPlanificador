@@ -16,7 +16,7 @@ def generate_launch_description():
                 {'coordy': 0.0}
             ]
         ),
-        
+
         Node(
             package='planificador',
             executable='client',
@@ -44,7 +44,7 @@ def generate_launch_description():
                 {'coordy': 0.0}
             ]
         ),
-
+    
         Node(
           package='planificador',
           executable='server',

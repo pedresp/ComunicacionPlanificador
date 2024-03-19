@@ -1,10 +1,12 @@
+from syst_msgs.srv import AdvService
+from syst_msgs.msg import Waypoints
 import rclpy
 from rclpy.node import Node
-from syst_msgs.srv import AdvService, Waypoints
 
 import numpy as np
 
 drone_id = ''
+wps_received = False
 class MinimalClientAsync(Node):
 
     def __init__(self):
@@ -28,8 +30,7 @@ class MinimalClientAsync(Node):
         rclpy.spin_until_future_complete(self, self.future)
         return self.future.result()
 
-is_server_done = False
-
+"""
 class MinimalServer(Node):
 
     def __init__(self, dname: str):
@@ -47,8 +48,24 @@ class MinimalServer(Node):
         response.ready = 1
         is_server_done = True
         return response
+"""
+
+class MinimalSubscriber(Node):
+
+    def __init__(self, dname: str):
+        super().__init__('minimal_subscriber')
+        #self.wps_subscription = self.create_subscription(Waypoints, f'{dname}_wps', self.listener_callback, 10)  #drone_id is already defined
+        self.wps_subscription = self.create_subscription(Waypoints, f'{dname}_wps', self.listener_callback, 10)
+        self.get_logger().info('lISTENING TO: "%s"' % f'{dname}_wps')
+
+    def listener_callback(self, msg):
+        global drone_id, wps_received
+        wps_array = np.array(msg.wps, dtype=np.float64).reshape((int)(len(msg.wps)/3), 3)
+        self.get_logger().info(f'data received {wps_array}')
+        wps_received = True
 
 def main():
+    global wps_received, drone_id
     rclpy.init()
 
     minimal_client = MinimalClientAsync()
@@ -59,10 +76,11 @@ def main():
 
     minimal_client.destroy_node()
     
-    minimal_server = MinimalServer(drone_id)
-    while not is_server_done:
-        rclpy.spin_once(minimal_server)
-    minimal_server.destroy_node()
+    minimal_subscriber = MinimalSubscriber(drone_id)
+    while not wps_received:
+        rclpy.spin_once(minimal_subscriber)
+    # rclpy.spin(minimal_subscriber)
+    minimal_subscriber.destroy_node()
 
     rclpy.shutdown()
 
