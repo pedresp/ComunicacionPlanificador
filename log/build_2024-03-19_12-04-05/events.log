@@ -1,0 +1,467 @@
+[0.000000] (-) TimerEvent: {}
+[0.000716] (planning_algorithm) JobQueued: {'identifier': 'planning_algorithm', 'dependencies': OrderedDict()}
+[0.000820] (syst_msgs) JobQueued: {'identifier': 'syst_msgs', 'dependencies': OrderedDict()}
+[0.000841] (planificador) JobQueued: {'identifier': 'planificador', 'dependencies': OrderedDict([('syst_msgs', '/home/iker/ros2_plan/src/install/syst_msgs')])}
+[0.002708] (syst_msgs) JobStarted: {'identifier': 'syst_msgs'}
+[0.088451] (planning_algorithm) JobStarted: {'identifier': 'planning_algorithm'}
+[0.105083] (-) TimerEvent: {}
+[0.176593] (syst_msgs) JobProgress: {'identifier': 'syst_msgs', 'progress': 'cmake'}
+[0.177181] (syst_msgs) Command: {'cmd': ['/usr/bin/cmake', '/home/iker/ros2_plan/src/syst_msgs', '-DCMAKE_INSTALL_PREFIX=/home/iker/ros2_plan/src/install/syst_msgs'], 'cwd': '/home/iker/ros2_plan/src/build/syst_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'iker'), ('LC_TIME', 'es_ES.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/iker/ros2_plan/install/syst_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/iker'), ('OLDPWD', '/home/iker/ros2_plan'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_ES.UTF-8'), ('SYSTEMD_EXEC_PID', '3009'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/iker/ros2_plan/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'iker'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'iker'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/iker/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/iker-VirtualBox:@/tmp/.ICE-unix/2763,unix/iker-VirtualBox:/tmp/.ICE-unix/2763'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_ES.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/733d0777_d2ca_4d42_9ea1_f1bbc00edce6'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'es_ES.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.FKZ1K2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.154'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/iker/ros2_plan/install/syst_msgs:/home/iker/ros2_plan/install/planning_algorithm:/home/iker/ros2_plan/install/planificador:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_ES.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_ES.UTF-8'), ('LC_IDENTIFICATION', 'es_ES.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/iker/ros2_plan/src/build/syst_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/iker/ros2_plan/install/syst_msgs/local/lib/python3.10/dist-packages:/home/iker/ros2_plan/install/planning_algorithm/lib/python3.10/site-packages:/home/iker/ros2_plan/install/planificador/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'es_ES.UTF-8'), ('LC_PAPER', 'es_ES.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/iker/ros2_plan/install/syst_msgs:/home/iker/ros2_plan/install/planning_algorithm:/home/iker/ros2_plan/install/planificador:/opt/ros/humble')]), 'shell': False}
+[0.206065] (-) TimerEvent: {}
+[0.270237] (syst_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.306186] (-) TimerEvent: {}
+[0.357245] (syst_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.362860] (syst_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.408875] (-) TimerEvent: {}
+[0.507516] (syst_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.512121] (-) TimerEvent: {}
+[0.522021] (syst_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.522381] (syst_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.522553] (syst_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.525449] (syst_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.691997] (-) TimerEvent: {}
+[0.740564] (syst_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.744179] (syst_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.744852] (syst_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.744993] (syst_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.746446] (syst_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.820349] (-) TimerEvent: {}
+[0.909496] (planning_algorithm) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../build/planning_algorithm', 'build', '--build-base', '/home/iker/ros2_plan/src/build/planning_algorithm/build', 'install', '--record', '/home/iker/ros2_plan/src/build/planning_algorithm/install.log', '--single-version-externally-managed'], 'cwd': '/home/iker/ros2_plan/src/planning_algorithm', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'iker', 'LC_TIME': 'es_ES.UTF-8', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/iker/ros2_plan/install/syst_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/iker', 'OLDPWD': '/home/iker/ros2_plan', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'es_ES.UTF-8', 'SYSTEMD_EXEC_PID': '3009', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_colcon_cd_root': '/opt/ros/humble', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/iker/ros2_plan/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'iker', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'iker', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/iker/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/iker-VirtualBox:@/tmp/.ICE-unix/2763,unix/iker-VirtualBox:/tmp/.ICE-unix/2763', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'es_ES.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/733d0777_d2ca_4d42_9ea1_f1bbc00edce6', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'es_ES.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.FKZ1K2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.154', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/iker/ros2_plan/install/syst_msgs:/home/iker/ros2_plan/install/planning_algorithm:/home/iker/ros2_plan/install/planificador:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'es_ES.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'es_ES.UTF-8', 'LC_IDENTIFICATION': 'es_ES.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/iker/ros2_plan/src/build/planning_algorithm', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/iker/ros2_plan/src/build/planning_algorithm/prefix_override:/home/iker/ros2_plan/src/install/planning_algorithm/lib/python3.10/site-packages:/home/iker/ros2_plan/install/syst_msgs/local/lib/python3.10/dist-packages:/home/iker/ros2_plan/install/planning_algorithm/lib/python3.10/site-packages:/home/iker/ros2_plan/install/planificador/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'es_ES.UTF-8', 'LC_PAPER': 'es_ES.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/iker/ros2_plan/install/syst_msgs'}, 'shell': False}
+[0.930424] (-) TimerEvent: {}
+[0.973186] (syst_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.032185] (-) TimerEvent: {}
+[1.073693] (syst_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[1.080711] (syst_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.087714] (syst_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.133068] (-) TimerEvent: {}
+[1.137768] (syst_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.182801] (syst_msgs) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.214781] (planning_algorithm) StdoutLine: {'line': b'running egg_info\n'}
+[1.215442] (planning_algorithm) StdoutLine: {'line': b'creating ../build/planning_algorithm/planning_algorithm.egg-info\n'}
+[1.215727] (planning_algorithm) StdoutLine: {'line': b'writing ../build/planning_algorithm/planning_algorithm.egg-info/PKG-INFO\n'}
+[1.215928] (planning_algorithm) StdoutLine: {'line': b'writing dependency_links to ../build/planning_algorithm/planning_algorithm.egg-info/dependency_links.txt\n'}
+[1.215996] (planning_algorithm) StdoutLine: {'line': b'writing entry points to ../build/planning_algorithm/planning_algorithm.egg-info/entry_points.txt\n'}
+[1.216044] (planning_algorithm) StdoutLine: {'line': b'writing requirements to ../build/planning_algorithm/planning_algorithm.egg-info/requires.txt\n'}
+[1.216089] (planning_algorithm) StdoutLine: {'line': b'writing top-level names to ../build/planning_algorithm/planning_algorithm.egg-info/top_level.txt\n'}
+[1.216343] (planning_algorithm) StdoutLine: {'line': b"writing manifest file '../build/planning_algorithm/planning_algorithm.egg-info/SOURCES.txt'\n"}
+[1.217979] (planning_algorithm) StdoutLine: {'line': b"reading manifest file '../build/planning_algorithm/planning_algorithm.egg-info/SOURCES.txt'\n"}
+[1.219225] (planning_algorithm) StdoutLine: {'line': b"writing manifest file '../build/planning_algorithm/planning_algorithm.egg-info/SOURCES.txt'\n"}
+[1.220197] (planning_algorithm) StdoutLine: {'line': b'running build\n'}
+[1.220314] (planning_algorithm) StdoutLine: {'line': b'running build_py\n'}
+[1.220388] (planning_algorithm) StdoutLine: {'line': b'creating /home/iker/ros2_plan/src/build/planning_algorithm/build\n'}
+[1.221510] (planning_algorithm) StdoutLine: {'line': b'creating /home/iker/ros2_plan/src/build/planning_algorithm/build/lib\n'}
+[1.221587] (planning_algorithm) StdoutLine: {'line': b'creating /home/iker/ros2_plan/src/build/planning_algorithm/build/lib/planning_algorithm\n'}
+[1.221636] (planning_algorithm) StdoutLine: {'line': b'copying planning_algorithm/readcsv.py -> /home/iker/ros2_plan/src/build/planning_algorithm/build/lib/planning_algorithm\n'}
+[1.222379] (planning_algorithm) StdoutLine: {'line': b'copying planning_algorithm/back_and_forth.py -> /home/iker/ros2_plan/src/build/planning_algorithm/build/lib/planning_algorithm\n'}
+[1.222427] (planning_algorithm) StdoutLine: {'line': b'copying planning_algorithm/__init__.py -> /home/iker/ros2_plan/src/build/planning_algorithm/build/lib/planning_algorithm\n'}
+[1.222469] (planning_algorithm) StdoutLine: {'line': b'copying planning_algorithm/spiral.py -> /home/iker/ros2_plan/src/build/planning_algorithm/build/lib/planning_algorithm\n'}
+[1.222510] (planning_algorithm) StdoutLine: {'line': b'copying planning_algorithm/heterogeneous_calculation.py -> /home/iker/ros2_plan/src/build/planning_algorithm/build/lib/planning_algorithm\n'}
+[1.223609] (planning_algorithm) StdoutLine: {'line': b'copying planning_algorithm/polygon_division.py -> /home/iker/ros2_plan/src/build/planning_algorithm/build/lib/planning_algorithm\n'}
+[1.223682] (planning_algorithm) StdoutLine: {'line': b'copying planning_algorithm/main.py -> /home/iker/ros2_plan/src/build/planning_algorithm/build/lib/planning_algorithm\n'}
+[1.223724] (planning_algorithm) StdoutLine: {'line': b'copying planning_algorithm/graphical_info.py -> /home/iker/ros2_plan/src/build/planning_algorithm/build/lib/planning_algorithm\n'}
+[1.223772] (planning_algorithm) StdoutLine: {'line': b'running install\n'}
+[1.223810] (planning_algorithm) StdoutLine: {'line': b'running install_lib\n'}
+[1.223850] (planning_algorithm) StdoutLine: {'line': b'creating /home/iker/ros2_plan/src/install/planning_algorithm/lib/python3.10/site-packages/planning_algorithm\n'}
+[1.223889] (planning_algorithm) StdoutLine: {'line': b'copying /home/iker/ros2_plan/src/build/planning_algorithm/build/lib/planning_algorithm/readcsv.py -> /home/iker/ros2_plan/src/install/planning_algorithm/lib/python3.10/site-packages/planning_algorithm\n'}
+[1.223930] (planning_algorithm) StdoutLine: {'line': b'copying /home/iker/ros2_plan/src/build/planning_algorithm/build/lib/planning_algorithm/back_and_forth.py -> /home/iker/ros2_plan/src/install/planning_algorithm/lib/python3.10/site-packages/planning_algorithm\n'}
+[1.223971] (planning_algorithm) StdoutLine: {'line': b'copying /home/iker/ros2_plan/src/build/planning_algorithm/build/lib/planning_algorithm/__init__.py -> /home/iker/ros2_plan/src/install/planning_algorithm/lib/python3.10/site-packages/planning_algorithm\n'}
+[1.224013] (planning_algorithm) StdoutLine: {'line': b'copying /home/iker/ros2_plan/src/build/planning_algorithm/build/lib/planning_algorithm/spiral.py -> /home/iker/ros2_plan/src/install/planning_algorithm/lib/python3.10/site-packages/planning_algorithm\n'}
+[1.224052] (planning_algorithm) StdoutLine: {'line': b'copying /home/iker/ros2_plan/src/build/planning_algorithm/build/lib/planning_algorithm/heterogeneous_calculation.py -> /home/iker/ros2_plan/src/install/planning_algorithm/lib/python3.10/site-packages/planning_algorithm\n'}
+[1.224092] (planning_algorithm) StdoutLine: {'line': b'copying /home/iker/ros2_plan/src/build/planning_algorithm/build/lib/planning_algorithm/polygon_division.py -> /home/iker/ros2_plan/src/install/planning_algorithm/lib/python3.10/site-packages/planning_algorithm\n'}
+[1.224137] (planning_algorithm) StdoutLine: {'line': b'copying /home/iker/ros2_plan/src/build/planning_algorithm/build/lib/planning_algorithm/main.py -> /home/iker/ros2_plan/src/install/planning_algorithm/lib/python3.10/site-packages/planning_algorithm\n'}
+[1.227728] (planning_algorithm) StdoutLine: {'line': b'copying /home/iker/ros2_plan/src/build/planning_algorithm/build/lib/planning_algorithm/graphical_info.py -> /home/iker/ros2_plan/src/install/planning_algorithm/lib/python3.10/site-packages/planning_algorithm\n'}
+[1.227897] (planning_algorithm) StdoutLine: {'line': b'byte-compiling /home/iker/ros2_plan/src/install/planning_algorithm/lib/python3.10/site-packages/planning_algorithm/readcsv.py to readcsv.cpython-310.pyc\n'}
+[1.227943] (planning_algorithm) StdoutLine: {'line': b'byte-compiling /home/iker/ros2_plan/src/install/planning_algorithm/lib/python3.10/site-packages/planning_algorithm/back_and_forth.py to back_and_forth.cpython-310.pyc\n'}
+[1.228014] (planning_algorithm) StdoutLine: {'line': b'byte-compiling /home/iker/ros2_plan/src/install/planning_algorithm/lib/python3.10/site-packages/planning_algorithm/__init__.py to __init__.cpython-310.pyc\n'}
+[1.228056] (planning_algorithm) StdoutLine: {'line': b'byte-compiling /home/iker/ros2_plan/src/install/planning_algorithm/lib/python3.10/site-packages/planning_algorithm/spiral.py to spiral.cpython-310.pyc\n'}
+[1.229850] (planning_algorithm) StdoutLine: {'line': b'byte-compiling /home/iker/ros2_plan/src/install/planning_algorithm/lib/python3.10/site-packages/planning_algorithm/heterogeneous_calculation.py to heterogeneous_calculation.cpython-310.pyc\n'}
+[1.231009] (planning_algorithm) StdoutLine: {'line': b'byte-compiling /home/iker/ros2_plan/src/install/planning_algorithm/lib/python3.10/site-packages/planning_algorithm/polygon_division.py to polygon_division.cpython-310.pyc\n'}
+[1.231673] (planning_algorithm) StdoutLine: {'line': b'byte-compiling /home/iker/ros2_plan/src/install/planning_algorithm/lib/python3.10/site-packages/planning_algorithm/main.py to main.cpython-310.pyc\n'}
+[1.234437] (planning_algorithm) StdoutLine: {'line': b'byte-compiling /home/iker/ros2_plan/src/install/planning_algorithm/lib/python3.10/site-packages/planning_algorithm/graphical_info.py to graphical_info.cpython-310.pyc\n'}
+[1.234784] (-) TimerEvent: {}
+[1.234982] (planning_algorithm) StdoutLine: {'line': b'running install_data\n'}
+[1.235565] (planning_algorithm) StdoutLine: {'line': b'creating /home/iker/ros2_plan/src/install/planning_algorithm/share/ament_index\n'}
+[1.235875] (planning_algorithm) StdoutLine: {'line': b'creating /home/iker/ros2_plan/src/install/planning_algorithm/share/ament_index/resource_index\n'}
+[1.236165] (planning_algorithm) StdoutLine: {'line': b'creating /home/iker/ros2_plan/src/install/planning_algorithm/share/ament_index/resource_index/packages\n'}
+[1.236452] (planning_algorithm) StdoutLine: {'line': b'copying resource/planning_algorithm -> /home/iker/ros2_plan/src/install/planning_algorithm/share/ament_index/resource_index/packages\n'}
+[1.236747] (planning_algorithm) StdoutLine: {'line': b'copying package.xml -> /home/iker/ros2_plan/src/install/planning_algorithm/share/planning_algorithm\n'}
+[1.237118] (planning_algorithm) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.237868] (planning_algorithm) StdoutLine: {'line': b'Copying ../build/planning_algorithm/planning_algorithm.egg-info to /home/iker/ros2_plan/src/install/planning_algorithm/lib/python3.10/site-packages/planning_algorithm-0.0.0-py3.10.egg-info\n'}
+[1.238515] (planning_algorithm) StdoutLine: {'line': b'running install_scripts\n'}
+[1.255943] (planning_algorithm) StdoutLine: {'line': b"writing list of installed files to '/home/iker/ros2_plan/src/build/planning_algorithm/install.log'\n"}
+[1.289913] (planning_algorithm) CommandEnded: {'returncode': 0}
+[1.336641] (-) TimerEvent: {}
+[1.347129] (planning_algorithm) JobEnded: {'identifier': 'planning_algorithm', 'rc': 0}
+[1.439667] (-) TimerEvent: {}
+[1.526709] (syst_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[1.539764] (-) TimerEvent: {}
+[1.641179] (-) TimerEvent: {}
+[1.730664] (syst_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.741828] (-) TimerEvent: {}
+[1.842382] (-) TimerEvent: {}
+[1.943330] (-) TimerEvent: {}
+[2.011925] (syst_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.033623] (syst_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[2.035353] (syst_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[2.044978] (-) TimerEvent: {}
+[2.062333] (syst_msgs) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[2.062553] (syst_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[2.062605] (syst_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[2.062649] (syst_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[2.100431] (syst_msgs) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[2.117119] (syst_msgs) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.118276] (syst_msgs) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.123188] (syst_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.148733] (syst_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[2.148893] (-) TimerEvent: {}
+[2.151670] (syst_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/iker/ros2_plan/src/build/syst_msgs\n'}
+[2.165209] (syst_msgs) CommandEnded: {'returncode': 0}
+[2.165745] (syst_msgs) JobProgress: {'identifier': 'syst_msgs', 'progress': 'build'}
+[2.165777] (syst_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/iker/ros2_plan/src/build/syst_msgs', '--', '-j6', '-l6'], 'cwd': '/home/iker/ros2_plan/src/build/syst_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'iker'), ('LC_TIME', 'es_ES.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/iker/ros2_plan/install/syst_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/iker'), ('OLDPWD', '/home/iker/ros2_plan'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_ES.UTF-8'), ('SYSTEMD_EXEC_PID', '3009'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/iker/ros2_plan/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'iker'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'iker'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/iker/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/iker-VirtualBox:@/tmp/.ICE-unix/2763,unix/iker-VirtualBox:/tmp/.ICE-unix/2763'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_ES.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/733d0777_d2ca_4d42_9ea1_f1bbc00edce6'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'es_ES.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.FKZ1K2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.154'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/iker/ros2_plan/install/syst_msgs:/home/iker/ros2_plan/install/planning_algorithm:/home/iker/ros2_plan/install/planificador:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_ES.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_ES.UTF-8'), ('LC_IDENTIFICATION', 'es_ES.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/iker/ros2_plan/src/build/syst_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/iker/ros2_plan/install/syst_msgs/local/lib/python3.10/dist-packages:/home/iker/ros2_plan/install/planning_algorithm/lib/python3.10/site-packages:/home/iker/ros2_plan/install/planificador/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'es_ES.UTF-8'), ('LC_PAPER', 'es_ES.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/iker/ros2_plan/install/syst_msgs:/home/iker/ros2_plan/install/planning_algorithm:/home/iker/ros2_plan/install/planificador:/opt/ros/humble')]), 'shell': False}
+[2.229770] (syst_msgs) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[2.245266] (syst_msgs) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[2.255918] (-) TimerEvent: {}
+[2.261578] (syst_msgs) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_copy_syst_msgs\n'}
+[2.359467] (-) TimerEvent: {}
+[2.460089] (-) TimerEvent: {}
+[2.560844] (-) TimerEvent: {}
+[2.581474] (syst_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[2.581964] (syst_msgs) StdoutLine: {'line': b'creating syst_msgs.egg-info\n'}
+[2.582604] (syst_msgs) StdoutLine: {'line': b'writing syst_msgs.egg-info/PKG-INFO\n'}
+[2.582966] (syst_msgs) StdoutLine: {'line': b'writing dependency_links to syst_msgs.egg-info/dependency_links.txt\n'}
+[2.583569] (syst_msgs) StdoutLine: {'line': b'writing top-level names to syst_msgs.egg-info/top_level.txt\n'}
+[2.583832] (syst_msgs) StdoutLine: {'line': b"writing manifest file 'syst_msgs.egg-info/SOURCES.txt'\n"}
+[2.586179] (syst_msgs) StdoutLine: {'line': b"reading manifest file 'syst_msgs.egg-info/SOURCES.txt'\n"}
+[2.587400] (syst_msgs) StdoutLine: {'line': b"writing manifest file 'syst_msgs.egg-info/SOURCES.txt'\n"}
+[2.655589] (syst_msgs) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_build_syst_msgs_egg\n'}
+[2.661789] (-) TimerEvent: {}
+[2.677560] (syst_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/syst_msgs__rosidl_generator_c.dir/rosidl_generator_c/syst_msgs/msg/detail/waypoints__functions.c.o\x1b[0m\n'}
+[2.678489] (syst_msgs) StdoutLine: {'line': b'[ 10%] Built target syst_msgs__cpp\n'}
+[2.678591] (syst_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/syst_msgs__rosidl_generator_c.dir/rosidl_generator_c/syst_msgs/srv/detail/adv_service__functions.c.o\x1b[0m\n'}
+[2.695945] (syst_msgs) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[2.696243] (syst_msgs) StdoutLine: {'line': b'[ 15%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[2.701012] (syst_msgs) StdoutLine: {'line': b'[ 17%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.763215] (-) TimerEvent: {}
+[2.767745] (syst_msgs) StdoutLine: {'line': b'[ 20%] \x1b[32m\x1b[1mLinking C shared library libsyst_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[2.848381] (syst_msgs) StdoutLine: {'line': b'[ 20%] Built target syst_msgs__rosidl_generator_c\n'}
+[2.863443] (-) TimerEvent: {}
+[2.867382] (syst_msgs) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.867575] (syst_msgs) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[2.868921] (syst_msgs) StdoutLine: {'line': b'[ 28%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[2.965957] (-) TimerEvent: {}
+[3.078441] (syst_msgs) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/syst_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/syst_msgs/srv/adv_service__type_support.cpp.o\x1b[0m\n'}
+[3.078665] (-) TimerEvent: {}
+[3.088335] (syst_msgs) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/syst_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/syst_msgs/srv/detail/adv_service__type_support.cpp.o\x1b[0m\n'}
+[3.099825] (syst_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/syst_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/syst_msgs/srv/detail/dds_fastrtps/adv_service__type_support.cpp.o\x1b[0m\n'}
+[3.196529] (-) TimerEvent: {}
+[3.296449] (syst_msgs) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/syst_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/syst_msgs/srv/adv_service__type_support.cpp.o\x1b[0m\n'}
+[3.296763] (-) TimerEvent: {}
+[3.313461] (syst_msgs) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/syst_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/syst_msgs/srv/detail/adv_service__type_support_c.cpp.o\x1b[0m\n'}
+[3.380444] (syst_msgs) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/syst_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/syst_msgs/msg/waypoints__type_support.cpp.o\x1b[0m\n'}
+[3.396998] (-) TimerEvent: {}
+[3.453949] (syst_msgs) StdoutLine: {'line': b'[ 46%] \x1b[32m\x1b[1mLinking CXX shared library libsyst_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[3.507272] (syst_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/syst_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/syst_msgs/msg/waypoints__type_support.cpp.o\x1b[0m\n'}
+[3.507603] (-) TimerEvent: {}
+[3.600796] (syst_msgs) StdoutLine: {'line': b'[ 48%] Built target syst_msgs__rosidl_typesupport_c\n'}
+[3.618170] (syst_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/syst_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/syst_msgs/msg/detail/waypoints__type_support.cpp.o\x1b[0m\n'}
+[3.618464] (-) TimerEvent: {}
+[3.618638] (syst_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding C object CMakeFiles/syst_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/syst_msgs/srv/detail/adv_service__type_support.c.o\x1b[0m\n'}
+[3.664593] (syst_msgs) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding C object CMakeFiles/syst_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/syst_msgs/msg/detail/waypoints__type_support.c.o\x1b[0m\n'}
+[3.665357] (syst_msgs) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/syst_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/syst_msgs/msg/detail/waypoints__type_support_c.cpp.o\x1b[0m\n'}
+[3.758686] (-) TimerEvent: {}
+[3.853309] (syst_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking C shared library libsyst_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[3.918493] (syst_msgs) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/syst_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/syst_msgs/msg/detail/dds_fastrtps/waypoints__type_support.cpp.o\x1b[0m\n'}
+[3.918820] (-) TimerEvent: {}
+[3.926245] (syst_msgs) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX shared library libsyst_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[3.984329] (syst_msgs) StdoutLine: {'line': b'[ 66%] Built target syst_msgs__rosidl_typesupport_cpp\n'}
+[4.118687] (-) TimerEvent: {}
+[4.132126] (syst_msgs) StdoutLine: {'line': b'[ 66%] Built target syst_msgs__rosidl_typesupport_introspection_c\n'}
+[4.145183] (syst_msgs) StdoutLine: {'line': b'[ 69%] \x1b[32m\x1b[1mLinking CXX shared library libsyst_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[4.210513] (syst_msgs) StdoutLine: {'line': b'[ 71%] \x1b[32m\x1b[1mLinking CXX shared library libsyst_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[4.220137] (-) TimerEvent: {}
+[4.301137] (syst_msgs) StdoutLine: {'line': b'[ 71%] Built target syst_msgs__rosidl_typesupport_fastrtps_c\n'}
+[4.320505] (-) TimerEvent: {}
+[4.325417] (syst_msgs) StdoutLine: {'line': b'[ 71%] Built target syst_msgs__rosidl_typesupport_introspection_cpp\n'}
+[4.403270] (syst_msgs) StdoutLine: {'line': b'[ 74%] \x1b[32m\x1b[1mLinking CXX shared library libsyst_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[4.421271] (-) TimerEvent: {}
+[4.520659] (syst_msgs) StdoutLine: {'line': b'[ 74%] Built target syst_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[4.528894] (-) TimerEvent: {}
+[4.577190] (syst_msgs) StdoutLine: {'line': b'[ 74%] Built target syst_msgs\n'}
+[4.630264] (syst_msgs) StdoutLine: {'line': b'[ 76%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[4.630693] (-) TimerEvent: {}
+[4.731622] (-) TimerEvent: {}
+[4.832485] (-) TimerEvent: {}
+[4.933352] (-) TimerEvent: {}
+[5.033787] (-) TimerEvent: {}
+[5.040727] (syst_msgs) StdoutLine: {'line': b'[ 76%] Built target syst_msgs__py\n'}
+[5.076959] (syst_msgs) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding C object CMakeFiles/syst_msgs__rosidl_generator_py.dir/rosidl_generator_py/syst_msgs/srv/_adv_service_s.c.o\x1b[0m\n'}
+[5.082415] (syst_msgs) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/syst_msgs__rosidl_generator_py.dir/rosidl_generator_py/syst_msgs/msg/_waypoints_s.c.o\x1b[0m\n'}
+[5.164000] (-) TimerEvent: {}
+[5.210174] (syst_msgs) StdoutLine: {'line': b'[ 84%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/syst_msgs/libsyst_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[5.258456] (syst_msgs) StdoutLine: {'line': b'[ 84%] Built target syst_msgs__rosidl_generator_py\n'}
+[5.264157] (-) TimerEvent: {}
+[5.289114] (syst_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/syst_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/syst_msgs/_syst_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[5.290331] (syst_msgs) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/syst_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/syst_msgs/_syst_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[5.292396] (syst_msgs) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/syst_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/syst_msgs/_syst_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[5.374365] (-) TimerEvent: {}
+[5.406416] (syst_msgs) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/syst_msgs/syst_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[5.408050] (syst_msgs) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/syst_msgs/syst_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[5.423746] (syst_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/syst_msgs/syst_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[5.452489] (syst_msgs) StdoutLine: {'line': b'[100%] Built target syst_msgs__rosidl_typesupport_c__pyext\n'}
+[5.457680] (syst_msgs) StdoutLine: {'line': b'[100%] Built target syst_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[5.472370] (syst_msgs) StdoutLine: {'line': b'[100%] Built target syst_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[5.476804] (-) TimerEvent: {}
+[5.493277] (syst_msgs) CommandEnded: {'returncode': 0}
+[5.577067] (-) TimerEvent: {}
+[5.678058] (-) TimerEvent: {}
+[5.762004] (syst_msgs) JobProgress: {'identifier': 'syst_msgs', 'progress': 'install'}
+[5.789803] (syst_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/iker/ros2_plan/src/build/syst_msgs'], 'cwd': '/home/iker/ros2_plan/src/build/syst_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'iker'), ('LC_TIME', 'es_ES.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/iker/ros2_plan/install/syst_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/iker'), ('OLDPWD', '/home/iker/ros2_plan'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_ES.UTF-8'), ('SYSTEMD_EXEC_PID', '3009'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_colcon_cd_root', '/opt/ros/humble'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/iker/ros2_plan/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'iker'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'iker'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/iker/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/iker-VirtualBox:@/tmp/.ICE-unix/2763,unix/iker-VirtualBox:/tmp/.ICE-unix/2763'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_ES.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/733d0777_d2ca_4d42_9ea1_f1bbc00edce6'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'es_ES.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.FKZ1K2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.154'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/iker/ros2_plan/install/syst_msgs:/home/iker/ros2_plan/install/planning_algorithm:/home/iker/ros2_plan/install/planificador:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_ES.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_ES.UTF-8'), ('LC_IDENTIFICATION', 'es_ES.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/iker/ros2_plan/src/build/syst_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/iker/ros2_plan/install/syst_msgs/local/lib/python3.10/dist-packages:/home/iker/ros2_plan/install/planning_algorithm/lib/python3.10/site-packages:/home/iker/ros2_plan/install/planificador/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'es_ES.UTF-8'), ('LC_PAPER', 'es_ES.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/iker/ros2_plan/install/syst_msgs:/home/iker/ros2_plan/install/planning_algorithm:/home/iker/ros2_plan/install/planificador:/opt/ros/humble')]), 'shell': False}
+[5.790965] (-) TimerEvent: {}
+[5.796528] (syst_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.797980] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/ament_index/resource_index/rosidl_interfaces/syst_msgs\n'}
+[5.801879] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs\n'}
+[5.801962] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv\n'}
+[5.802200] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/adv_service.h\n'}
+[5.809050] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail\n'}
+[5.809466] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail/adv_service__struct.h\n'}
+[5.809675] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail/adv_service__type_support.h\n'}
+[5.809829] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail/adv_service__functions.c\n'}
+[5.810607] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail/adv_service__functions.h\n'}
+[5.810687] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg\n'}
+[5.810732] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[5.810776] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/waypoints.h\n'}
+[5.810815] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail\n'}
+[5.810862] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail/waypoints__functions.h\n'}
+[5.811099] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail/waypoints__struct.h\n'}
+[5.811148] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail/waypoints__type_support.h\n'}
+[5.811236] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail/waypoints__functions.c\n'}
+[5.811286] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/environment/library_path.sh\n'}
+[5.811376] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/environment/library_path.dsv\n'}
+[5.811466] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_generator_c.so\n'}
+[5.811652] (syst_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_generator_c.so" to ""\n'}
+[5.811695] (syst_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs\n'}
+[5.811733] (syst_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv\n'}
+[5.811959] (syst_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail\n'}
+[5.812004] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail/adv_service__rosidl_typesupport_fastrtps_c.h\n'}
+[5.812403] (syst_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg\n'}
+[5.812454] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[5.812494] (syst_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail\n'}
+[5.812533] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail/waypoints__rosidl_typesupport_fastrtps_c.h\n'}
+[5.812572] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[5.812672] (syst_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[5.812764] (syst_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs\n'}
+[5.812989] (syst_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv\n'}
+[5.813037] (syst_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail\n'}
+[5.813077] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail/adv_service__type_support.c\n'}
+[5.813117] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail/adv_service__rosidl_typesupport_introspection_c.h\n'}
+[5.813330] (syst_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg\n'}
+[5.813378] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[5.813419] (syst_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail\n'}
+[5.813459] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail/waypoints__rosidl_typesupport_introspection_c.h\n'}
+[5.813497] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail/waypoints__type_support.c\n'}
+[5.813536] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_typesupport_introspection_c.so\n'}
+[5.813575] (syst_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[5.813769] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_typesupport_c.so\n'}
+[5.813813] (syst_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_typesupport_c.so" to ""\n'}
+[5.813852] (syst_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs\n'}
+[5.813977] (syst_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv\n'}
+[5.814093] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/adv_service.hpp\n'}
+[5.814350] (syst_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail\n'}
+[5.814494] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail/adv_service__struct.hpp\n'}
+[5.814733] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail/adv_service__traits.hpp\n'}
+[5.814811] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail/adv_service__builder.hpp\n'}
+[5.814876] (syst_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg\n'}
+[5.814938] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/waypoints.hpp\n'}
+[5.815108] (syst_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail\n'}
+[5.815151] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail/waypoints__traits.hpp\n'}
+[5.815191] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail/waypoints__builder.hpp\n'}
+[5.815230] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail/waypoints__struct.hpp\n'}
+[5.815331] (syst_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs\n'}
+[5.815434] (syst_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv\n'}
+[5.815574] (syst_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail\n'}
+[5.815883] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail/adv_service__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.816019] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail/dds_fastrtps\n'}
+[5.816124] (syst_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg\n'}
+[5.816268] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[5.816371] (syst_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail\n'}
+[5.816512] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail/waypoints__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[5.816626] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail/dds_fastrtps\n'}
+[5.816720] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[5.816821] (syst_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[5.816962] (syst_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs\n'}
+[5.817064] (syst_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv\n'}
+[5.817257] (syst_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail\n'}
+[5.817310] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail/adv_service__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.817350] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail/adv_service__type_support.cpp\n'}
+[5.817388] (syst_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg\n'}
+[5.817430] (syst_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail\n'}
+[5.817468] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail/waypoints__rosidl_typesupport_introspection_cpp.hpp\n'}
+[5.817506] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail/waypoints__type_support.cpp\n'}
+[5.817543] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[5.817581] (syst_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[5.817622] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_typesupport_cpp.so\n'}
+[5.817663] (syst_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[5.817700] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/environment/pythonpath.sh\n'}
+[5.817737] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/environment/pythonpath.dsv\n'}
+[5.817774] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs-0.0.0-py3.10.egg-info\n'}
+[5.817812] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[5.817849] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[5.817887] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[5.817924] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[5.817963] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs\n'}
+[5.818007] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/srv\n'}
+[5.818060] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/srv/__init__.py\n'}
+[5.818112] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/srv/_adv_service.py\n'}
+[5.818164] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/srv/_adv_service_s.c\n'}
+[5.818208] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/__init__.py\n'}
+[5.818263] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/syst_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.818303] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/msg\n'}
+[5.818344] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/msg/_waypoints.py\n'}
+[5.818382] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/msg/_waypoints_s.c\n'}
+[5.818424] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/msg/__init__.py\n'}
+[5.818462] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/syst_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.818500] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/libsyst_msgs__rosidl_generator_py.so\n'}
+[5.818544] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/syst_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.818597] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/_syst_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[5.818666] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/_syst_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[5.818720] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/_syst_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[5.851825] (syst_msgs) StdoutLine: {'line': b"Listing '/home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs'...\n"}
+[5.852101] (syst_msgs) StdoutLine: {'line': b"Compiling '/home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/__init__.py'...\n"}
+[5.852179] (syst_msgs) StdoutLine: {'line': b"Listing '/home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/msg'...\n"}
+[5.852249] (syst_msgs) StdoutLine: {'line': b"Compiling '/home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/msg/__init__.py'...\n"}
+[5.852299] (syst_msgs) StdoutLine: {'line': b"Compiling '/home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/msg/_waypoints.py'...\n"}
+[5.852347] (syst_msgs) StdoutLine: {'line': b"Listing '/home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/srv'...\n"}
+[5.852408] (syst_msgs) StdoutLine: {'line': b"Compiling '/home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/srv/__init__.py'...\n"}
+[5.852458] (syst_msgs) StdoutLine: {'line': b"Compiling '/home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/srv/_adv_service.py'...\n"}
+[5.857571] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/syst_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.866380] (syst_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/syst_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[5.866502] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/syst_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.868346] (syst_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/syst_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[5.868473] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/syst_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[5.868631] (syst_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/syst_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[5.868684] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_generator_py.so\n'}
+[5.868725] (syst_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_generator_py.so" to ""\n'}
+[5.868768] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/srv/AdvService.idl\n'}
+[5.868807] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/msg/Waypoints.idl\n'}
+[5.868845] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/srv/AdvService.srv\n'}
+[5.868884] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/srv/AdvService_Request.msg\n'}
+[5.868922] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/srv/AdvService_Response.msg\n'}
+[5.868959] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/msg/Waypoints.msg\n'}
+[5.868998] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/ament_index/resource_index/package_run_dependencies/syst_msgs\n'}
+[5.869036] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/ament_index/resource_index/parent_prefix_path/syst_msgs\n'}
+[5.869075] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/environment/ament_prefix_path.sh\n'}
+[5.869170] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/environment/ament_prefix_path.dsv\n'}
+[5.869225] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/environment/path.sh\n'}
+[5.869580] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/environment/path.dsv\n'}
+[5.869698] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/local_setup.bash\n'}
+[5.869903] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/local_setup.sh\n'}
+[5.870614] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/local_setup.zsh\n'}
+[5.871312] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/local_setup.dsv\n'}
+[5.871597] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/package.dsv\n'}
+[5.871684] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/ament_index/resource_index/packages/syst_msgs\n'}
+[5.871845] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/export_syst_msgs__rosidl_generator_cExport.cmake\n'}
+[5.872073] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/export_syst_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[5.872522] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/export_syst_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[5.872953] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/export_syst_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[5.873056] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/syst_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[5.873125] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/syst_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[5.873174] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/syst_msgs__rosidl_typesupport_cExport.cmake\n'}
+[5.873223] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/syst_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[5.873270] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/export_syst_msgs__rosidl_generator_cppExport.cmake\n'}
+[5.873319] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/export_syst_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[5.873366] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/export_syst_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[5.873412] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/syst_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[5.873459] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/syst_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[5.873506] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/syst_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[5.873552] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/syst_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[5.873600] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/export_syst_msgs__rosidl_generator_pyExport.cmake\n'}
+[5.873647] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/export_syst_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[5.873708] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[5.873779] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[5.873849] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[5.873924] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[5.873982] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[5.874031] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[5.874080] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[5.874136] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/syst_msgsConfig.cmake\n'}
+[5.874323] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/syst_msgsConfig-version.cmake\n'}
+[5.874589] (syst_msgs) StdoutLine: {'line': b'-- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/package.xml\n'}
+[5.877896] (syst_msgs) CommandEnded: {'returncode': 0}
+[5.891207] (-) TimerEvent: {}
+[5.996044] (-) TimerEvent: {}
+[6.096600] (-) TimerEvent: {}
+[6.197115] (-) TimerEvent: {}
+[6.300592] (-) TimerEvent: {}
+[6.343746] (syst_msgs) JobEnded: {'identifier': 'syst_msgs', 'rc': 0}
+[6.344490] (planificador) JobStarted: {'identifier': 'planificador'}
+[6.408945] (-) TimerEvent: {}
+[6.513410] (-) TimerEvent: {}
+[6.616760] (-) TimerEvent: {}
+[6.719582] (-) TimerEvent: {}
+[6.822846] (-) TimerEvent: {}
+[6.924242] (-) TimerEvent: {}
+[7.026547] (-) TimerEvent: {}
+[7.127038] (-) TimerEvent: {}
+[7.205643] (planificador) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../build/planificador', 'build', '--build-base', '/home/iker/ros2_plan/src/build/planificador/build', 'install', '--record', '/home/iker/ros2_plan/src/build/planificador/install.log', '--single-version-externally-managed'], 'cwd': '/home/iker/ros2_plan/src/planificador', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'iker', 'LC_TIME': 'es_ES.UTF-8', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/iker/ros2_plan/src/install/syst_msgs/lib:/home/iker/ros2_plan/install/syst_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/iker', 'OLDPWD': '/home/iker/ros2_plan', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'es_ES.UTF-8', 'SYSTEMD_EXEC_PID': '3009', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_colcon_cd_root': '/opt/ros/humble', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/iker/ros2_plan/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'iker', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'iker', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/iker/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/iker-VirtualBox:@/tmp/.ICE-unix/2763,unix/iker-VirtualBox:/tmp/.ICE-unix/2763', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'es_ES.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/733d0777_d2ca_4d42_9ea1_f1bbc00edce6', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'es_ES.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.FKZ1K2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.154', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/iker/ros2_plan/src/install/syst_msgs:/home/iker/ros2_plan/install/syst_msgs:/home/iker/ros2_plan/install/planning_algorithm:/home/iker/ros2_plan/install/planificador:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'es_ES.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'es_ES.UTF-8', 'LC_IDENTIFICATION': 'es_ES.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/iker/ros2_plan/src/build/planificador', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/iker/ros2_plan/src/build/planificador/prefix_override:/home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages:/home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages:/home/iker/ros2_plan/install/syst_msgs/local/lib/python3.10/dist-packages:/home/iker/ros2_plan/install/planning_algorithm/lib/python3.10/site-packages:/home/iker/ros2_plan/install/planificador/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'es_ES.UTF-8', 'LC_PAPER': 'es_ES.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/iker/ros2_plan/src/install/syst_msgs:/home/iker/ros2_plan/install/syst_msgs'}, 'shell': False}
+[7.227786] (-) TimerEvent: {}
+[7.328824] (-) TimerEvent: {}
+[7.428516] (planificador) StdoutLine: {'line': b'running egg_info\n'}
+[7.428799] (planificador) StdoutLine: {'line': b'creating ../build/planificador/planificador.egg-info\n'}
+[7.428862] (-) TimerEvent: {}
+[7.428941] (planificador) StdoutLine: {'line': b'writing ../build/planificador/planificador.egg-info/PKG-INFO\n'}
+[7.429177] (planificador) StdoutLine: {'line': b'writing dependency_links to ../build/planificador/planificador.egg-info/dependency_links.txt\n'}
+[7.429355] (planificador) StdoutLine: {'line': b'writing entry points to ../build/planificador/planificador.egg-info/entry_points.txt\n'}
+[7.429404] (planificador) StdoutLine: {'line': b'writing requirements to ../build/planificador/planificador.egg-info/requires.txt\n'}
+[7.429444] (planificador) StdoutLine: {'line': b'writing top-level names to ../build/planificador/planificador.egg-info/top_level.txt\n'}
+[7.429589] (planificador) StdoutLine: {'line': b"writing manifest file '../build/planificador/planificador.egg-info/SOURCES.txt'\n"}
+[7.430974] (planificador) StdoutLine: {'line': b"reading manifest file '../build/planificador/planificador.egg-info/SOURCES.txt'\n"}
+[7.431055] (planificador) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[7.431490] (planificador) StdoutLine: {'line': b"writing manifest file '../build/planificador/planificador.egg-info/SOURCES.txt'\n"}
+[7.431720] (planificador) StdoutLine: {'line': b'running build\n'}
+[7.431773] (planificador) StdoutLine: {'line': b'running build_py\n'}
+[7.432143] (planificador) StdoutLine: {'line': b'creating /home/iker/ros2_plan/src/build/planificador/build\n'}
+[7.432348] (planificador) StdoutLine: {'line': b'creating /home/iker/ros2_plan/src/build/planificador/build/lib\n'}
+[7.432481] (planificador) StdoutLine: {'line': b'creating /home/iker/ros2_plan/src/build/planificador/build/lib/planificador\n'}
+[7.432846] (planificador) StdoutLine: {'line': b'copying planificador/client.py -> /home/iker/ros2_plan/src/build/planificador/build/lib/planificador\n'}
+[7.433025] (planificador) StdoutLine: {'line': b'copying planificador/client3.py -> /home/iker/ros2_plan/src/build/planificador/build/lib/planificador\n'}
+[7.433072] (planificador) StdoutLine: {'line': b'copying planificador/__init__.py -> /home/iker/ros2_plan/src/build/planificador/build/lib/planificador\n'}
+[7.433189] (planificador) StdoutLine: {'line': b'copying planificador/wps_processation_tools.py -> /home/iker/ros2_plan/src/build/planificador/build/lib/planificador\n'}
+[7.433260] (planificador) StdoutLine: {'line': b'copying planificador/client2.py -> /home/iker/ros2_plan/src/build/planificador/build/lib/planificador\n'}
+[7.433310] (planificador) StdoutLine: {'line': b'copying planificador/service.py -> /home/iker/ros2_plan/src/build/planificador/build/lib/planificador\n'}
+[7.433350] (planificador) StdoutLine: {'line': b'running install\n'}
+[7.433486] (planificador) StdoutLine: {'line': b'running install_lib\n'}
+[7.434199] (planificador) StdoutLine: {'line': b'creating /home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages/planificador\n'}
+[7.434509] (planificador) StdoutLine: {'line': b'copying /home/iker/ros2_plan/src/build/planificador/build/lib/planificador/client.py -> /home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages/planificador\n'}
+[7.434594] (planificador) StdoutLine: {'line': b'copying /home/iker/ros2_plan/src/build/planificador/build/lib/planificador/client3.py -> /home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages/planificador\n'}
+[7.434637] (planificador) StdoutLine: {'line': b'copying /home/iker/ros2_plan/src/build/planificador/build/lib/planificador/__init__.py -> /home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages/planificador\n'}
+[7.434678] (planificador) StdoutLine: {'line': b'copying /home/iker/ros2_plan/src/build/planificador/build/lib/planificador/wps_processation_tools.py -> /home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages/planificador\n'}
+[7.434719] (planificador) StdoutLine: {'line': b'copying /home/iker/ros2_plan/src/build/planificador/build/lib/planificador/client2.py -> /home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages/planificador\n'}
+[7.434759] (planificador) StdoutLine: {'line': b'copying /home/iker/ros2_plan/src/build/planificador/build/lib/planificador/service.py -> /home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages/planificador\n'}
+[7.435303] (planificador) StdoutLine: {'line': b'byte-compiling /home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages/planificador/client.py to client.cpython-310.pyc\n'}
+[7.436388] (planificador) StdoutLine: {'line': b'byte-compiling /home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages/planificador/client3.py to client3.cpython-310.pyc\n'}
+[7.436843] (planificador) StdoutLine: {'line': b'byte-compiling /home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages/planificador/__init__.py to __init__.cpython-310.pyc\n'}
+[7.436919] (planificador) StdoutLine: {'line': b'byte-compiling /home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages/planificador/wps_processation_tools.py to wps_processation_tools.cpython-310.pyc\n'}
+[7.437319] (planificador) StdoutLine: {'line': b'byte-compiling /home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages/planificador/client2.py to client2.cpython-310.pyc\n'}
+[7.437828] (planificador) StdoutLine: {'line': b'byte-compiling /home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages/planificador/service.py to service.cpython-310.pyc\n'}
+[7.438346] (planificador) StdoutLine: {'line': b'running install_data\n'}
+[7.438839] (planificador) StdoutLine: {'line': b'creating /home/iker/ros2_plan/src/install/planificador/share/ament_index\n'}
+[7.438916] (planificador) StdoutLine: {'line': b'creating /home/iker/ros2_plan/src/install/planificador/share/ament_index/resource_index\n'}
+[7.438961] (planificador) StdoutLine: {'line': b'creating /home/iker/ros2_plan/src/install/planificador/share/ament_index/resource_index/packages\n'}
+[7.439191] (planificador) StdoutLine: {'line': b'copying resource/planificador -> /home/iker/ros2_plan/src/install/planificador/share/ament_index/resource_index/packages\n'}
+[7.439265] (planificador) StdoutLine: {'line': b'copying package.xml -> /home/iker/ros2_plan/src/install/planificador/share/planificador\n'}
+[7.439400] (planificador) StdoutLine: {'line': b'creating /home/iker/ros2_plan/src/install/planificador/share/planificador/launch\n'}
+[7.439482] (planificador) StdoutLine: {'line': b'copying launch/launch.py -> /home/iker/ros2_plan/src/install/planificador/share/planificador/launch\n'}
+[7.439631] (planificador) StdoutLine: {'line': b'creating /home/iker/ros2_plan/src/install/planificador/share/planificador/config\n'}
+[7.439674] (planificador) StdoutLine: {'line': b'copying config/perimeter.yaml -> /home/iker/ros2_plan/src/install/planificador/share/planificador/config\n'}
+[7.439713] (planificador) StdoutLine: {'line': b'running install_egg_info\n'}
+[7.441169] (planificador) StdoutLine: {'line': b'Copying ../build/planificador/planificador.egg-info to /home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages/planificador-0.0.0-py3.10.egg-info\n'}
+[7.441736] (planificador) StdoutLine: {'line': b'running install_scripts\n'}
+[7.455732] (planificador) StdoutLine: {'line': b'Installing client script to /home/iker/ros2_plan/src/install/planificador/lib/planificador\n'}
+[7.456006] (planificador) StdoutLine: {'line': b'Installing client2 script to /home/iker/ros2_plan/src/install/planificador/lib/planificador\n'}
+[7.456171] (planificador) StdoutLine: {'line': b'Installing client3 script to /home/iker/ros2_plan/src/install/planificador/lib/planificador\n'}
+[7.456220] (planificador) StdoutLine: {'line': b'Installing server script to /home/iker/ros2_plan/src/install/planificador/lib/planificador\n'}
+[7.456538] (planificador) StdoutLine: {'line': b"writing list of installed files to '/home/iker/ros2_plan/src/build/planificador/install.log'\n"}
+[7.489412] (planificador) CommandEnded: {'returncode': 0}
+[7.529567] (-) TimerEvent: {}
+[7.530599] (planificador) JobEnded: {'identifier': 'planificador', 'rc': 0}
+[7.531304] (-) EventReactorShutdown: {}

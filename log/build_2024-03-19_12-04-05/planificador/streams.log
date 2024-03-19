@@ -1,0 +1,57 @@
+[0.864s] Invoking command in '/home/iker/ros2_plan/src/planificador': AMENT_PREFIX_PATH=/home/iker/ros2_plan/src/install/syst_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/iker/ros2_plan/src/install/syst_msgs:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/iker/ros2_plan/src/install/syst_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/iker/ros2_plan/src/build/planificador/prefix_override:/home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages:/home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/planificador build --build-base /home/iker/ros2_plan/src/build/planificador/build install --record /home/iker/ros2_plan/src/build/planificador/install.log --single-version-externally-managed
+[1.084s] running egg_info
+[1.084s] creating ../build/planificador/planificador.egg-info
+[1.084s] writing ../build/planificador/planificador.egg-info/PKG-INFO
+[1.085s] writing dependency_links to ../build/planificador/planificador.egg-info/dependency_links.txt
+[1.085s] writing entry points to ../build/planificador/planificador.egg-info/entry_points.txt
+[1.085s] writing requirements to ../build/planificador/planificador.egg-info/requires.txt
+[1.085s] writing top-level names to ../build/planificador/planificador.egg-info/top_level.txt
+[1.085s] writing manifest file '../build/planificador/planificador.egg-info/SOURCES.txt'
+[1.087s] reading manifest file '../build/planificador/planificador.egg-info/SOURCES.txt'
+[1.087s] adding license file 'LICENSE'
+[1.087s] writing manifest file '../build/planificador/planificador.egg-info/SOURCES.txt'
+[1.087s] running build
+[1.087s] running build_py
+[1.088s] creating /home/iker/ros2_plan/src/build/planificador/build
+[1.088s] creating /home/iker/ros2_plan/src/build/planificador/build/lib
+[1.088s] creating /home/iker/ros2_plan/src/build/planificador/build/lib/planificador
+[1.088s] copying planificador/client.py -> /home/iker/ros2_plan/src/build/planificador/build/lib/planificador
+[1.089s] copying planificador/client3.py -> /home/iker/ros2_plan/src/build/planificador/build/lib/planificador
+[1.089s] copying planificador/__init__.py -> /home/iker/ros2_plan/src/build/planificador/build/lib/planificador
+[1.089s] copying planificador/wps_processation_tools.py -> /home/iker/ros2_plan/src/build/planificador/build/lib/planificador
+[1.089s] copying planificador/client2.py -> /home/iker/ros2_plan/src/build/planificador/build/lib/planificador
+[1.089s] copying planificador/service.py -> /home/iker/ros2_plan/src/build/planificador/build/lib/planificador
+[1.089s] running install
+[1.089s] running install_lib
+[1.090s] creating /home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages/planificador
+[1.090s] copying /home/iker/ros2_plan/src/build/planificador/build/lib/planificador/client.py -> /home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages/planificador
+[1.090s] copying /home/iker/ros2_plan/src/build/planificador/build/lib/planificador/client3.py -> /home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages/planificador
+[1.090s] copying /home/iker/ros2_plan/src/build/planificador/build/lib/planificador/__init__.py -> /home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages/planificador
+[1.090s] copying /home/iker/ros2_plan/src/build/planificador/build/lib/planificador/wps_processation_tools.py -> /home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages/planificador
+[1.090s] copying /home/iker/ros2_plan/src/build/planificador/build/lib/planificador/client2.py -> /home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages/planificador
+[1.090s] copying /home/iker/ros2_plan/src/build/planificador/build/lib/planificador/service.py -> /home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages/planificador
+[1.091s] byte-compiling /home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages/planificador/client.py to client.cpython-310.pyc
+[1.092s] byte-compiling /home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages/planificador/client3.py to client3.cpython-310.pyc
+[1.092s] byte-compiling /home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages/planificador/__init__.py to __init__.cpython-310.pyc
+[1.092s] byte-compiling /home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages/planificador/wps_processation_tools.py to wps_processation_tools.cpython-310.pyc
+[1.093s] byte-compiling /home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages/planificador/client2.py to client2.cpython-310.pyc
+[1.093s] byte-compiling /home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages/planificador/service.py to service.cpython-310.pyc
+[1.094s] running install_data
+[1.094s] creating /home/iker/ros2_plan/src/install/planificador/share/ament_index
+[1.094s] creating /home/iker/ros2_plan/src/install/planificador/share/ament_index/resource_index
+[1.095s] creating /home/iker/ros2_plan/src/install/planificador/share/ament_index/resource_index/packages
+[1.095s] copying resource/planificador -> /home/iker/ros2_plan/src/install/planificador/share/ament_index/resource_index/packages
+[1.095s] copying package.xml -> /home/iker/ros2_plan/src/install/planificador/share/planificador
+[1.095s] creating /home/iker/ros2_plan/src/install/planificador/share/planificador/launch
+[1.095s] copying launch/launch.py -> /home/iker/ros2_plan/src/install/planificador/share/planificador/launch
+[1.095s] creating /home/iker/ros2_plan/src/install/planificador/share/planificador/config
+[1.095s] copying config/perimeter.yaml -> /home/iker/ros2_plan/src/install/planificador/share/planificador/config
+[1.095s] running install_egg_info
+[1.097s] Copying ../build/planificador/planificador.egg-info to /home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages/planificador-0.0.0-py3.10.egg-info
+[1.097s] running install_scripts
+[1.111s] Installing client script to /home/iker/ros2_plan/src/install/planificador/lib/planificador
+[1.112s] Installing client2 script to /home/iker/ros2_plan/src/install/planificador/lib/planificador
+[1.112s] Installing client3 script to /home/iker/ros2_plan/src/install/planificador/lib/planificador
+[1.112s] Installing server script to /home/iker/ros2_plan/src/install/planificador/lib/planificador
+[1.112s] writing list of installed files to '/home/iker/ros2_plan/src/build/planificador/install.log'
+[1.146s] Invoked command in '/home/iker/ros2_plan/src/planificador' returned '0': AMENT_PREFIX_PATH=/home/iker/ros2_plan/src/install/syst_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/iker/ros2_plan/src/install/syst_msgs:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/iker/ros2_plan/src/install/syst_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/iker/ros2_plan/src/build/planificador/prefix_override:/home/iker/ros2_plan/src/install/planificador/lib/python3.10/site-packages:/home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/planificador build --build-base /home/iker/ros2_plan/src/build/planificador/build install --record /home/iker/ros2_plan/src/build/planificador/install.log --single-version-externally-managed

@@ -26,7 +26,7 @@ endif()
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/AdvService.srv"
-  "srv/Waypoints.srv"
+  "msg/Waypoints.msg"
 )
 
 ament_package()

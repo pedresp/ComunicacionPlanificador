@@ -1,0 +1,272 @@
+[0.177s] Invoking command in '/home/iker/ros2_plan/src/build/syst_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/iker/ros2_plan/install/planning_algorithm:/home/iker/ros2_plan/install/planificador:/opt/ros/humble /usr/bin/cmake /home/iker/ros2_plan/src/syst_msgs -DCMAKE_INSTALL_PREFIX=/home/iker/ros2_plan/src/install/syst_msgs
+[0.263s] -- The C compiler identification is GNU 11.4.0
+[0.349s] -- The CXX compiler identification is GNU 11.4.0
+[0.355s] -- Detecting C compiler ABI info
+[0.500s] -- Detecting C compiler ABI info - done
+[0.514s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.514s] -- Detecting C compile features
+[0.515s] -- Detecting C compile features - done
+[0.517s] -- Detecting CXX compiler ABI info
+[0.733s] -- Detecting CXX compiler ABI info - done
+[0.736s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.737s] -- Detecting CXX compile features
+[0.737s] -- Detecting CXX compile features - done
+[0.738s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.965s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.066s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[1.074s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.080s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.130s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.175s] -- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.519s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.723s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.004s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.026s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[2.027s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[2.054s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[2.054s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.055s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[2.055s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[2.093s] -- Found PythonExtra: .so  
+[2.109s] -- Added test 'lint_cmake' to check CMake code style
+[2.110s] -- Added test 'xmllint' to check XML markup files
+[2.115s] -- Configuring done
+[2.141s] -- Generating done
+[2.144s] -- Build files have been written to: /home/iker/ros2_plan/src/build/syst_msgs
+[2.157s] Invoked command in '/home/iker/ros2_plan/src/build/syst_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/iker/ros2_plan/install/planning_algorithm:/home/iker/ros2_plan/install/planificador:/opt/ros/humble /usr/bin/cmake /home/iker/ros2_plan/src/syst_msgs -DCMAKE_INSTALL_PREFIX=/home/iker/ros2_plan/src/install/syst_msgs
+[2.158s] Invoking command in '/home/iker/ros2_plan/src/build/syst_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/iker/ros2_plan/install/planning_algorithm:/home/iker/ros2_plan/install/planificador:/opt/ros/humble /usr/bin/cmake --build /home/iker/ros2_plan/src/build/syst_msgs -- -j6 -l6
+[2.222s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.237s] [  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.254s] [  5%] Built target ament_cmake_python_copy_syst_msgs
+[2.574s] running egg_info
+[2.574s] creating syst_msgs.egg-info
+[2.575s] writing syst_msgs.egg-info/PKG-INFO
+[2.575s] writing dependency_links to syst_msgs.egg-info/dependency_links.txt
+[2.576s] writing top-level names to syst_msgs.egg-info/top_level.txt
+[2.576s] writing manifest file 'syst_msgs.egg-info/SOURCES.txt'
+[2.578s] reading manifest file 'syst_msgs.egg-info/SOURCES.txt'
+[2.579s] writing manifest file 'syst_msgs.egg-info/SOURCES.txt'
+[2.648s] [  5%] Built target ament_cmake_python_build_syst_msgs_egg
+[2.670s] [  7%] [32mBuilding C object CMakeFiles/syst_msgs__rosidl_generator_c.dir/rosidl_generator_c/syst_msgs/msg/detail/waypoints__functions.c.o[0m
+[2.670s] [ 10%] Built target syst_msgs__cpp
+[2.671s] [ 10%] [32mBuilding C object CMakeFiles/syst_msgs__rosidl_generator_c.dir/rosidl_generator_c/syst_msgs/srv/detail/adv_service__functions.c.o[0m
+[2.688s] [ 12%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[2.688s] [ 15%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[2.693s] [ 17%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[2.760s] [ 20%] [32m[1mLinking C shared library libsyst_msgs__rosidl_generator_c.so[0m
+[2.840s] [ 20%] Built target syst_msgs__rosidl_generator_c
+[2.859s] [ 25%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.860s] [ 25%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.861s] [ 28%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[3.070s] [ 30%] [32mBuilding CXX object CMakeFiles/syst_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/syst_msgs/srv/adv_service__type_support.cpp.o[0m
+[3.080s] [ 33%] [32mBuilding CXX object CMakeFiles/syst_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/syst_msgs/srv/detail/adv_service__type_support.cpp.o[0m
+[3.092s] [ 35%] [32mBuilding CXX object CMakeFiles/syst_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/syst_msgs/srv/detail/dds_fastrtps/adv_service__type_support.cpp.o[0m
+[3.289s] [ 38%] [32mBuilding CXX object CMakeFiles/syst_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/syst_msgs/srv/adv_service__type_support.cpp.o[0m
+[3.306s] [ 41%] [32mBuilding CXX object CMakeFiles/syst_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/syst_msgs/srv/detail/adv_service__type_support_c.cpp.o[0m
+[3.373s] [ 43%] [32mBuilding CXX object CMakeFiles/syst_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/syst_msgs/msg/waypoints__type_support.cpp.o[0m
+[3.446s] [ 46%] [32m[1mLinking CXX shared library libsyst_msgs__rosidl_typesupport_c.so[0m
+[3.499s] [ 48%] [32mBuilding CXX object CMakeFiles/syst_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/syst_msgs/msg/waypoints__type_support.cpp.o[0m
+[3.593s] [ 48%] Built target syst_msgs__rosidl_typesupport_c
+[3.610s] [ 51%] [32mBuilding CXX object CMakeFiles/syst_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/syst_msgs/msg/detail/waypoints__type_support.cpp.o[0m
+[3.611s] [ 53%] [32mBuilding C object CMakeFiles/syst_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/syst_msgs/srv/detail/adv_service__type_support.c.o[0m
+[3.657s] [ 56%] [32mBuilding C object CMakeFiles/syst_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/syst_msgs/msg/detail/waypoints__type_support.c.o[0m
+[3.657s] [ 58%] [32mBuilding CXX object CMakeFiles/syst_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/syst_msgs/msg/detail/waypoints__type_support_c.cpp.o[0m
+[3.845s] [ 61%] [32m[1mLinking C shared library libsyst_msgs__rosidl_typesupport_introspection_c.so[0m
+[3.911s] [ 64%] [32mBuilding CXX object CMakeFiles/syst_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/syst_msgs/msg/detail/dds_fastrtps/waypoints__type_support.cpp.o[0m
+[3.918s] [ 66%] [32m[1mLinking CXX shared library libsyst_msgs__rosidl_typesupport_cpp.so[0m
+[3.976s] [ 66%] Built target syst_msgs__rosidl_typesupport_cpp
+[4.124s] [ 66%] Built target syst_msgs__rosidl_typesupport_introspection_c
+[4.137s] [ 69%] [32m[1mLinking CXX shared library libsyst_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[4.203s] [ 71%] [32m[1mLinking CXX shared library libsyst_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[4.293s] [ 71%] Built target syst_msgs__rosidl_typesupport_fastrtps_c
+[4.318s] [ 71%] Built target syst_msgs__rosidl_typesupport_introspection_cpp
+[4.395s] [ 74%] [32m[1mLinking CXX shared library libsyst_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[4.513s] [ 74%] Built target syst_msgs__rosidl_typesupport_fastrtps_cpp
+[4.569s] [ 74%] Built target syst_msgs
+[4.622s] [ 76%] [34m[1mGenerating Python code for ROS interfaces[0m
+[5.033s] [ 76%] Built target syst_msgs__py
+[5.069s] [ 79%] [32mBuilding C object CMakeFiles/syst_msgs__rosidl_generator_py.dir/rosidl_generator_py/syst_msgs/srv/_adv_service_s.c.o[0m
+[5.074s] [ 82%] [32mBuilding C object CMakeFiles/syst_msgs__rosidl_generator_py.dir/rosidl_generator_py/syst_msgs/msg/_waypoints_s.c.o[0m
+[5.202s] [ 84%] [32m[1mLinking C shared library rosidl_generator_py/syst_msgs/libsyst_msgs__rosidl_generator_py.so[0m
+[5.251s] [ 84%] Built target syst_msgs__rosidl_generator_py
+[5.281s] [ 87%] [32mBuilding C object CMakeFiles/syst_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/syst_msgs/_syst_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[5.283s] [ 89%] [32mBuilding C object CMakeFiles/syst_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/syst_msgs/_syst_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[5.284s] [ 92%] [32mBuilding C object CMakeFiles/syst_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/syst_msgs/_syst_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[5.399s] [ 94%] [32m[1mLinking C shared library rosidl_generator_py/syst_msgs/syst_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[5.400s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/syst_msgs/syst_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[5.416s] [100%] [32m[1mLinking C shared library rosidl_generator_py/syst_msgs/syst_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[5.445s] [100%] Built target syst_msgs__rosidl_typesupport_c__pyext
+[5.450s] [100%] Built target syst_msgs__rosidl_typesupport_introspection_c__pyext
+[5.464s] [100%] Built target syst_msgs__rosidl_typesupport_fastrtps_c__pyext
+[5.485s] Invoked command in '/home/iker/ros2_plan/src/build/syst_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/iker/ros2_plan/install/planning_algorithm:/home/iker/ros2_plan/install/planificador:/opt/ros/humble /usr/bin/cmake --build /home/iker/ros2_plan/src/build/syst_msgs -- -j6 -l6
+[5.782s] Invoking command in '/home/iker/ros2_plan/src/build/syst_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/iker/ros2_plan/install/planning_algorithm:/home/iker/ros2_plan/install/planificador:/opt/ros/humble /usr/bin/cmake --install /home/iker/ros2_plan/src/build/syst_msgs
+[5.790s] -- Install configuration: ""
+[5.794s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/ament_index/resource_index/rosidl_interfaces/syst_msgs
+[5.794s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs
+[5.794s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv
+[5.801s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/adv_service.h
+[5.801s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail
+[5.801s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail/adv_service__struct.h
+[5.802s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail/adv_service__type_support.h
+[5.802s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail/adv_service__functions.c
+[5.803s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail/adv_service__functions.h
+[5.803s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg
+[5.803s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/rosidl_generator_c__visibility_control.h
+[5.803s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/waypoints.h
+[5.803s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail
+[5.803s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail/waypoints__functions.h
+[5.803s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail/waypoints__struct.h
+[5.803s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail/waypoints__type_support.h
+[5.803s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail/waypoints__functions.c
+[5.803s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/environment/library_path.sh
+[5.803s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/environment/library_path.dsv
+[5.804s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_generator_c.so
+[5.804s] -- Set runtime path of "/home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_generator_c.so" to ""
+[5.804s] -- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs
+[5.804s] -- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv
+[5.804s] -- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail
+[5.804s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail/adv_service__rosidl_typesupport_fastrtps_c.h
+[5.804s] -- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg
+[5.804s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[5.804s] -- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail
+[5.804s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail/waypoints__rosidl_typesupport_fastrtps_c.h
+[5.805s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_typesupport_fastrtps_c.so
+[5.805s] -- Set runtime path of "/home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[5.805s] -- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs
+[5.805s] -- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv
+[5.805s] -- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail
+[5.805s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail/adv_service__type_support.c
+[5.805s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail/adv_service__rosidl_typesupport_introspection_c.h
+[5.805s] -- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg
+[5.805s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[5.805s] -- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail
+[5.805s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail/waypoints__rosidl_typesupport_introspection_c.h
+[5.805s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail/waypoints__type_support.c
+[5.805s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_typesupport_introspection_c.so
+[5.806s] -- Set runtime path of "/home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_typesupport_introspection_c.so" to ""
+[5.806s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_typesupport_c.so
+[5.806s] -- Set runtime path of "/home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_typesupport_c.so" to ""
+[5.806s] -- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs
+[5.806s] -- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv
+[5.806s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/adv_service.hpp
+[5.806s] -- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail
+[5.807s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail/adv_service__struct.hpp
+[5.807s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail/adv_service__traits.hpp
+[5.807s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail/adv_service__builder.hpp
+[5.807s] -- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg
+[5.807s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/waypoints.hpp
+[5.807s] -- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail
+[5.807s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail/waypoints__traits.hpp
+[5.807s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail/waypoints__builder.hpp
+[5.807s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail/waypoints__struct.hpp
+[5.807s] -- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs
+[5.807s] -- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv
+[5.808s] -- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail
+[5.808s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail/adv_service__rosidl_typesupport_fastrtps_cpp.hpp
+[5.808s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail/dds_fastrtps
+[5.808s] -- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg
+[5.808s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[5.808s] -- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail
+[5.808s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail/waypoints__rosidl_typesupport_fastrtps_cpp.hpp
+[5.809s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail/dds_fastrtps
+[5.809s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_typesupport_fastrtps_cpp.so
+[5.809s] -- Set runtime path of "/home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[5.809s] -- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs
+[5.809s] -- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv
+[5.809s] -- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail
+[5.809s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail/adv_service__rosidl_typesupport_introspection_cpp.hpp
+[5.809s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/srv/detail/adv_service__type_support.cpp
+[5.809s] -- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg
+[5.809s] -- Up-to-date: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail
+[5.809s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail/waypoints__rosidl_typesupport_introspection_cpp.hpp
+[5.809s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/include/syst_msgs/syst_msgs/msg/detail/waypoints__type_support.cpp
+[5.809s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_typesupport_introspection_cpp.so
+[5.809s] -- Set runtime path of "/home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[5.810s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_typesupport_cpp.so
+[5.810s] -- Set runtime path of "/home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_typesupport_cpp.so" to ""
+[5.810s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/environment/pythonpath.sh
+[5.810s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/environment/pythonpath.dsv
+[5.810s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs-0.0.0-py3.10.egg-info
+[5.810s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs-0.0.0-py3.10.egg-info/dependency_links.txt
+[5.810s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs-0.0.0-py3.10.egg-info/SOURCES.txt
+[5.810s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs-0.0.0-py3.10.egg-info/PKG-INFO
+[5.810s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs-0.0.0-py3.10.egg-info/top_level.txt
+[5.810s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs
+[5.810s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/srv
+[5.810s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/srv/__init__.py
+[5.810s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/srv/_adv_service.py
+[5.810s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/srv/_adv_service_s.c
+[5.810s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/__init__.py
+[5.810s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/syst_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[5.810s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/msg
+[5.810s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/msg/_waypoints.py
+[5.810s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/msg/_waypoints_s.c
+[5.810s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/msg/__init__.py
+[5.810s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/syst_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[5.810s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/libsyst_msgs__rosidl_generator_py.so
+[5.810s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/syst_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[5.811s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/_syst_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[5.811s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/_syst_msgs_s.ep.rosidl_typesupport_c.c
+[5.811s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/_syst_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[5.844s] Listing '/home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs'...
+[5.844s] Compiling '/home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/__init__.py'...
+[5.844s] Listing '/home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/msg'...
+[5.844s] Compiling '/home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/msg/__init__.py'...
+[5.844s] Compiling '/home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/msg/_waypoints.py'...
+[5.844s] Listing '/home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/srv'...
+[5.844s] Compiling '/home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/srv/__init__.py'...
+[5.844s] Compiling '/home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/srv/_adv_service.py'...
+[5.852s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/syst_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[5.858s] -- Set runtime path of "/home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/syst_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[5.858s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/syst_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[5.860s] -- Set runtime path of "/home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/syst_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[5.860s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/syst_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[5.861s] -- Set runtime path of "/home/iker/ros2_plan/src/install/syst_msgs/local/lib/python3.10/dist-packages/syst_msgs/syst_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[5.861s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_generator_py.so
+[5.861s] -- Set runtime path of "/home/iker/ros2_plan/src/install/syst_msgs/lib/libsyst_msgs__rosidl_generator_py.so" to ""
+[5.861s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/srv/AdvService.idl
+[5.861s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/msg/Waypoints.idl
+[5.861s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/srv/AdvService.srv
+[5.861s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/srv/AdvService_Request.msg
+[5.861s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/srv/AdvService_Response.msg
+[5.861s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/msg/Waypoints.msg
+[5.861s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/ament_index/resource_index/package_run_dependencies/syst_msgs
+[5.861s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/ament_index/resource_index/parent_prefix_path/syst_msgs
+[5.861s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/environment/ament_prefix_path.sh
+[5.861s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/environment/ament_prefix_path.dsv
+[5.861s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/environment/path.sh
+[5.862s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/environment/path.dsv
+[5.862s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/local_setup.bash
+[5.862s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/local_setup.sh
+[5.863s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/local_setup.zsh
+[5.863s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/local_setup.dsv
+[5.864s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/package.dsv
+[5.864s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/ament_index/resource_index/packages/syst_msgs
+[5.864s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/export_syst_msgs__rosidl_generator_cExport.cmake
+[5.864s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/export_syst_msgs__rosidl_generator_cExport-noconfig.cmake
+[5.864s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/export_syst_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[5.865s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/export_syst_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[5.865s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/syst_msgs__rosidl_typesupport_introspection_cExport.cmake
+[5.865s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/syst_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[5.865s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/syst_msgs__rosidl_typesupport_cExport.cmake
+[5.865s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/syst_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[5.865s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/export_syst_msgs__rosidl_generator_cppExport.cmake
+[5.865s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/export_syst_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[5.865s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/export_syst_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[5.865s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/syst_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[5.865s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/syst_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[5.865s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/syst_msgs__rosidl_typesupport_cppExport.cmake
+[5.865s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/syst_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[5.866s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/export_syst_msgs__rosidl_generator_pyExport.cmake
+[5.866s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/export_syst_msgs__rosidl_generator_pyExport-noconfig.cmake
+[5.866s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/rosidl_cmake-extras.cmake
+[5.866s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[5.866s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[5.866s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[5.866s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[5.866s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.866s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[5.866s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/syst_msgsConfig.cmake
+[5.866s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/cmake/syst_msgsConfig-version.cmake
+[5.867s] -- Installing: /home/iker/ros2_plan/src/install/syst_msgs/share/syst_msgs/package.xml
+[5.870s] Invoked command in '/home/iker/ros2_plan/src/build/syst_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/iker/ros2_plan/install/planning_algorithm:/home/iker/ros2_plan/install/planificador:/opt/ros/humble /usr/bin/cmake --install /home/iker/ros2_plan/src/build/syst_msgs

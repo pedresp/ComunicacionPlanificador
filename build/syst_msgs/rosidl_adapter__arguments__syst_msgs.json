@@ -1,0 +1,7 @@
+{
+  "package_name": "syst_msgs",
+  "non_idl_tuples": [
+    "/home/iker/ros2_plan/src/syst_msgs:srv/AdvService.srv",
+    "/home/iker/ros2_plan/src/syst_msgs:msg/Waypoints.msg"
+  ]
+}
