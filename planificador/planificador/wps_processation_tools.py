@@ -1,17 +1,22 @@
 import numpy as np
 
+class Drone_initial:
+    def __init__(self, name : str, coords : tuple[float, float]):
+        self.name = name
+        self.coords = coords
+    
 class WPS_metadata:
     def __init__(self) -> None:
         self.map_struct = {}
     
-    def add_drone(self, drone_id : str, sweep_width: float) -> None:
+    def add_drone(self, drone : Drone_initial, sweep_width: float) -> None:
         try:
-            self.map_struct[sweep_width].append(drone_id)
+            self.map_struct[sweep_width].append(drone)
         except:
             self.map_struct[sweep_width] = []
-            self.map_struct[sweep_width].append(drone_id)
+            self.map_struct[sweep_width].append(drone)
 
-    def flatten(self) -> list[str]:
+    def flatten(self) -> list[Drone_initial]:
         result = []
         for data in self.map_struct.items():
             for elem in data[1]:

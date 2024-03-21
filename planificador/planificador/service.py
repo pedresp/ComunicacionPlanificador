@@ -31,7 +31,7 @@ class MinimalService(Node):
                         request.speed, request.tof, request.ancho_de_barrido, request.coordx, request.coordy))
         
         drones.append([request.coordx, request.coordy, request.ancho_de_barrido, request.speed, request.tof])
-        wps_metadata.add_drone(request.drone_id, request.ancho_de_barrido)
+        wps_metadata.add_drone(Drone_initial(request.drone_id, (request.coordx, request.coordy)), request.ancho_de_barrido)
 
         i = i-1
         if i == 0:
@@ -80,7 +80,9 @@ def main():
 
     for list_array_2d in proccesed_wps:
         for array_2d in list_array_2d:
-            minimal_client = MinimalClient(drones_names[index], array_2d)
+            array_to_send = np.append(np.array([[drones_names[index].coords[0], drones_names[index].coords[1], flight_height]]), \
+                                      array_2d, axis=0)
+            minimal_client = MinimalClient(drones_names[index].name, array_to_send)
             cli_response = minimal_client.send_request()
             minimal_client.get_logger().info(
                 'Is ready ? %d' % (cli_response.ready)
