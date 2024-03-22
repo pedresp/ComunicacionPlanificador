@@ -42,7 +42,7 @@ class MinimalClient(Node):
 
     def __init__(self, drone_id, waypoints):
         super().__init__('minimal_client')
-        self.client = self.create_client(Waypoints, f'{drone_id}_service')
+        self.client = self.create_client(Waypoints, f'/{drone_id}/{drone_id}_service')
         self.waypoints = waypoints
         while not self.client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('service not available, waiting again...')
