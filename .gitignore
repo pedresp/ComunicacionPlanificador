@@ -1,3 +1,4 @@
 .vscode/
-simplesim/
-sim_msgs/
+simplesim/config
+simplesim/waypoints
+
