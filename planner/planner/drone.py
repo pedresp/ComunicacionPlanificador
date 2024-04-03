@@ -43,40 +43,6 @@ class Drone(Node):
         wps_array = np.array(msg.wps, dtype=np.float64).reshape((int)(len(msg.wps)/3), 3)
         self.get_logger().info(f'data received {wps_array}')
 
-"""
-class MinimalServer(Node):
-
-    def __init__(self, dname: str):
-        super().__init__('minimal_server_async')
-        self.srv = self.create_service(Waypoints, f'{dname}_service', self.receive_wps_callback)
-    
-    def receive_wps_callback(self, request, response):
-        global is_server_done
-        wps_array = np.array(request.wps, dtype=np.float64).reshape((int)(len(request.wps)/3), 3)
-        self.get_logger().info(f'data received {wps_array}')
-        
-        #print(wps_array)
-        #print(f'las coord son {wps_array[0][0]} : {wps_array[0][1]}')
-
-        response.ready = 1
-        is_server_done = True
-        return response
-
-
-class MinimalSubscriber(Node):
-
-    def __init__(self, dname: str):
-        super().__init__('minimal_subscriber')
-        #self.wps_subscription = self.create_subscription(Waypoints, f'{dname}_wps', self.listener_callback, 10)  #drone_id is already defined
-        self.wps_subscription = self.create_subscription(Waypoints, f'{dname}_wps', self.listener_callback, 10)
-        self.get_logger().info('lISTENING TO: "%s"' % f'{dname}_wps')
-
-    def listener_callback(self, msg):
-        global drone_id, wps_received
-        wps_array = np.array(msg.wps, dtype=np.float64).reshape((int)(len(msg.wps)/3), 3)
-        self.get_logger().info(f'data received {wps_array}')
-        wps_received = True
-"""
 def main():
     global drone_id
     rclpy.init()
