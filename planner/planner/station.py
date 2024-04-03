@@ -64,25 +64,6 @@ class Station(Node):
                 self.get_logger().info('Publishing: "%s"' % drones_names[index])
                 index = index + 1
 
-"""
-class MinimalClient(Node):
-
-    def __init__(self, drone_id, waypoints):
-        super().__init__('minimal_client')
-        self.client = self.create_client(Waypoints, f'{drone_id}_service')
-        self.waypoints = waypoints
-        while not self.client.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info('service not available, waiting again...')
-        self.req = Waypoints.Request()
-
-    def send_request(self):
-        #np_array = np.array([[1.0, 2.0, 3.0, 4.0], [21.0, 3.0, 4.0, 5.0]], dtype=float)
-        np_array = self.waypoints
-        self.req.wps = np_array.flatten().tolist()
-        self.future = self.client.call_async(self.req)
-        rclpy.spin_until_future_complete(self, self.future)
-        return self.future.result()
-"""
 class MinimalPublisher(Node):
 
     def __init__(self, drone_id, waypoints):
