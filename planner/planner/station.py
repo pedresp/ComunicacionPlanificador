@@ -56,7 +56,7 @@ class Station(Node):
             for array_2d in list_array_2d:
                 array_to_send = np.append(np.array([[drones_names[index].coords[0], drones_names[index].coords[1], flight_height]]), \
                                       array_2d, axis=0)
-                publisher = self.create_publisher(Waypoints, f'/{drones_names[index].name}/{drones_names[index].name}_wps', 10)
+                publisher = self.create_publisher(Waypoints, f'/{drones_names[index].name}/route', 10)
                 msg = Waypoints()
                 msg.wps = array_to_send.flatten().tolist()
 

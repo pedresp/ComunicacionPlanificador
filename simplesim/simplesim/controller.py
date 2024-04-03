@@ -17,8 +17,8 @@ class WpsPublisher(Node):
 
         self.cli = self.create_client(AdvService, '/adv_service')
         drone_id = self.declare_parameter('drone_id', 'drone_x').get_parameter_value().string_value
-        self.wps_subscription = self.create_subscription(Waypoints, f'/{drone_id}/{drone_id}_wps', self.listener_callback, 10)
-        self.get_logger().info('lISTENING TO: "%s"' % f'{drone_id}_wps')
+        self.wps_subscription = self.create_subscription(Waypoints, f'/{drone_id}/route', self.listener_callback, 10)
+        self.get_logger().info('lISTENING TO: "%s"' % f'/{drone_id}/route')
 
         while not self.cli.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('service not available, waiting again...')
