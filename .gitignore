@@ -2,4 +2,5 @@
 simplesim/config
 simplesim/waypoints
 simplesim/rviz
-simplesim/launch
+simplesim/launch/my_launcher_drones.launch.py
+planificador/
