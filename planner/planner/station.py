@@ -64,23 +64,6 @@ class Station(Node):
                 self.get_logger().info('Publishing: "%s"' % drones_names[index])
                 index = index + 1
 
-class MinimalPublisher(Node):
-
-    def __init__(self, drone_id, waypoints):
-        super().__init__('minimal_publisher')
-        #self.get_logger().info(f'data received {waypoints}')
-        self.publisher_ = self.create_publisher(Waypoints, f'{drone_id}_wps', 10)
-        self.waypoints = waypoints
-        self.drone_id = drone_id
-        self.public_wps()
-
-    def public_wps(self):
-        msg = Waypoints()
-        np_array = self.waypoints
-        msg.wps = np_array.flatten().tolist()
-        self.publisher_.publish(msg)
-        self.get_logger().info('Publishing: "%s"' % self.drone_id)
-
 def main():
     rclpy.init()
 
