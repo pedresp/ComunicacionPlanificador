@@ -45,7 +45,7 @@ class Station(Node):
     
     def publish_wps(self):
         global drones, wps_metadata, flight_height
-        wps = verdugo(drones, os.path.join(os.getcwd(), 'install/planner/share/planner/config/perimeter.yaml'))
+        wps = verdugo(drones, os.path.join(os.getcwd(), 'install/planner/share/planner/config/perimeter.yaml'), wps_metadata.flatten_str())
 
         index = 0
 

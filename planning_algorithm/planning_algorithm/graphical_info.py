@@ -222,3 +222,58 @@ def draw_final_plans(coords,limit_points,waypoint_list):
     plt.xlabel("x")
     plt.ylabel("y")
     plt.show()
+
+def draw_final_plans2(coords,limit_points,waypoint_list,drones_names):
+    polygon_array=np.array(limit_points)
+    xP=polygon_array[:,0]
+    xP1=np.append(xP,xP[0])
+    yP=polygon_array[:,1]
+    yP1=np.append(yP,yP[0])
+    
+    """
+    for coord in coords:
+        xU=np.array(coord)[:,0]
+        yU=np.array(coord)[:,1]
+        plt.scatter(xU,yU)
+    """
+    
+    k=0
+    num=0
+    leg=[]
+    fig, ax = plt.subplots()    
+
+    for waypoints in waypoint_list:
+
+        
+        waypoint_matrix=np.array(waypoints)
+        UAV=np.array(coords[k])
+        
+        
+        final_waypoint_matrix=np.ones((len(waypoint_matrix),len(waypoint_matrix[0])+2,2))*float("NaN")
+        for i in range(0,len(UAV)):                 #add first waypoint
+            
+            final_waypoint_matrix[i,0,:]=UAV[i,:]
+
+        for i in range(0,len(UAV)):    #add next and last waypoint
+            for j in range (0, len(waypoint_matrix[0])):
+                if not np.isnan(waypoint_matrix[i, j, 1]):
+                    final_waypoint_matrix[i,j+1,:]=waypoint_matrix[i,j,:]
+                    final_waypoint_matrix[i,j+2,:]=UAV[i,:]
+                    
+        
+        for i in range(0,len(UAV)):
+            label_uav=drones_names[num]#"UAV "+str(num)
+            ax.plot(final_waypoint_matrix[i,:,0],final_waypoint_matrix[i,:,1],label=label_uav)
+            num=num+1
+            ax.axis('equal')
+            leg = ax.legend(loc="lower left")
+             
+        k=k+1
+
+    ax.plot(xP1,yP1,'--k',)
+    plt.draw()
+    plt.grid()
+    plt.title("UAV Trajectories")
+    plt.xlabel("x")
+    plt.ylabel("y")
+    plt.show()

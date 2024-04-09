@@ -22,6 +22,13 @@ class WPS_metadata:
             for elem in data[1]:
                 result.append(elem)
         return result
+    
+    def flatten_str(self) -> list[str]:
+        result = []
+        for data in self.map_struct.items():
+            for elem in data[1]:
+                result.append(elem.name)
+        return result        
 
 def same_line(point0, point1, point2) -> bool:
     vector1 = (point1[0] - point0[0], point1[1] - point0[1], point1[2] - point0[2])
