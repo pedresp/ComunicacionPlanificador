@@ -37,7 +37,7 @@ import os
 #    UAVs = []
 #    for row in reader:
 #        UAVs.append(row[:])
-def verdugo(drones, path_to_area_coord: str):
+def verdugo(drones, path_to_area_coord: str, drones_names: list[str]):
     #UAVs = readUAV()
     UAVs = drones
 
@@ -101,7 +101,8 @@ def verdugo(drones, path_to_area_coord: str):
 
 
 
-    draw_final_plans(coords_list,convex_limits,waypoint_list)
+    #draw_final_plans(coords_list,convex_limits,waypoint_list)
+    draw_final_plans2(coords_list,convex_limits,waypoint_list,drones_names)
     print("Elapsed time:",(end-start))
 
     return waypoint_list
