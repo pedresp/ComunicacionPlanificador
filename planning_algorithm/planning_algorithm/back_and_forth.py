@@ -209,6 +209,7 @@ def back_and_forth(point_list,spacing, separation, UAV):
     else:
         prev_array=array=split(V[1,:], V[0,:], split_val) 
     #plt.scatter(V[:,0],V[:,1])
+    final = prev_array
 
     for i in range (1,int(len(V)/2)):
         dist=LA.norm(V[(2*i),:]-V[(2*i)+1,:])
