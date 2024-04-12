@@ -22,7 +22,7 @@ class Station(Node):
         global i, flight_height
         i = self.declare_parameter('drones_quantity', 0.0).get_parameter_value().double_value
         flight_height = self.declare_parameter('flight_height', 0.0).get_parameter_value().double_value
-        self.srv = self.create_service(AdvService, '/adv_service', self.add_two_ints_callback)
+        self.srv = self.create_service(AdvService, '/advertisement_service', self.add_two_ints_callback)
 
     def add_two_ints_callback(self, request, response):
         global service_active, drones, i, wps_metadata

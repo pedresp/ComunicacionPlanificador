@@ -13,7 +13,7 @@ class Drone(Node):
         global drone_id
 
         super().__init__('Drone')
-        self.cli = self.create_client(AdvService, 'adv_service')
+        self.cli = self.create_client(AdvService, '/advertisement_service')
         drone_id = self.declare_parameter('drone_id', 'drone_x').get_parameter_value().string_value
         self.wps_subscription = self.create_subscription(Waypoints, f'{drone_id}_wps', self.listener_callback, 10)
         self.get_logger().info('lISTENING TO: "%s"' % f'{drone_id}_wps')
