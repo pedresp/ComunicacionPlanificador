@@ -1,0 +1,3 @@
+float64 total_time
+float64 total_distance
+string drone_id
