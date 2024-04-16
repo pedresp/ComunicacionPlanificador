@@ -76,8 +76,7 @@ class Publisher(Node):
             self.print_point(subsequent)
             angle = calculate_angle(saved_current_wp, next_wp, subsequent)
             self.get_logger().info(f'ANGLE: {angle}')
-            if angle < 3:
-                current_wp = self.overtake(current_wp, subsequent)
+
         self.finish(current_wp, waypoints[-1]) # Last point
 
         results_publisher = ResultsPublisher(TIME_SPENT, TOTAL_DISTANCE)
