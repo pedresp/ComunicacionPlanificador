@@ -26,6 +26,7 @@ setup(
         'console_scripts': [
             'drone = planner.drone:main',
             'station = planner.station:main',
+            'simulation_results = planner.simulation_results:main'
         ],
     },
 )

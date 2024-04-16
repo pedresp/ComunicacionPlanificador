@@ -6,6 +6,8 @@ from rclpy.node import Node
 from planning_algorithm.main import verdugo
 from .wps_processation_tools import *
 
+from std_msgs.msg import Float64
+
 import os
 
 i = 0
@@ -23,6 +25,7 @@ class Station(Node):
         i = self.declare_parameter('drones_quantity', 0.0).get_parameter_value().double_value
         flight_height = self.declare_parameter('flight_height', 0.0).get_parameter_value().double_value
         self.srv = self.create_service(AdvService, '/advertisement_service', self.add_two_ints_callback)
+        self.exec_time_publisher = self.create_publisher(Float64, '/execution_time', 10)
 
     def add_two_ints_callback(self, request, response):
         global service_active, drones, i, wps_metadata
@@ -45,7 +48,12 @@ class Station(Node):
     
     def publish_wps(self):
         global drones, wps_metadata, flight_height
-        wps = verdugo(drones, os.path.join(os.getcwd(), 'install/planner/share/planner/config/perimeter.yaml'), wps_metadata.flatten_str())
+        wps, exec_time = verdugo(drones, os.path.join(os.getcwd(), 'install/planner/share/planner/config/perimeter.yaml'), wps_metadata.flatten_str())
+        self.get_logger().info('Execution time was: %f' % exec_time)
+
+        execution_time = Float64()
+        execution_time.data = exec_time
+        self.exec_time_publisher.publish(execution_time)
 
         index = 0
 

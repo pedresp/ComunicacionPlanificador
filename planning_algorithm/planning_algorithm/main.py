@@ -105,7 +105,7 @@ def verdugo(drones, path_to_area_coord: str, drones_names: list[str]):
     draw_final_plans2(coords_list,convex_limits,waypoint_list,drones_names)
     print("Elapsed time:",(end-start))
 
-    return waypoint_list
+    return waypoint_list, (end-start)
 
 
 if __name__ == '__main__':
