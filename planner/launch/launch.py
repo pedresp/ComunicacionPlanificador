@@ -11,7 +11,7 @@ def generate_launch_description():
                 {'drone_id': 'drone_0'},
                 {'speed': 20.0},
                 {'tof': 52.2},
-                {'ancho_de_barrido': 33.0},
+                {'sweep_width': 33.0},
                 {'coordx': -200.0},
                 {'coordy': 0.0}
             ]
@@ -25,7 +25,7 @@ def generate_launch_description():
                 {'drone_id': 'drone_1'},
                 {'speed': 20.0},
                 {'tof': 52.2},
-                {'ancho_de_barrido': 33.0},
+                {'sweep_width': 33.0},
                 {'coordx': -200.0},
                 {'coordy': 0.0}
             ]
@@ -39,7 +39,7 @@ def generate_launch_description():
                 {'drone_id': 'drone_2'},
                 {'speed': 20.0},
                 {'tof': 52.2},
-                {'ancho_de_barrido': 13.0},
+                {'sweep_width': 13.0},
                 {'coordx': -200.0},
                 {'coordy': 0.0}
             ]

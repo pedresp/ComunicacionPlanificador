@@ -29,11 +29,11 @@ class Station(Node):
         
         if service_active:
             response.response = 1.0
-            self.get_logger().info('Incoming request\ndrone_id: %s speed: %d tof: %d ancho_de_barrido: %d\ncoordx: %d, coordy: %d' % (request.drone_id, \
-                            request.speed, request.tof, request.ancho_de_barrido, request.coordx, request.coordy))
+            self.get_logger().info('Incoming request\ndrone_id: %s speed: %d tof: %d sweep_width: %d\ncoordx: %d, coordy: %d' % (request.drone_id, \
+                            request.speed, request.tof, request.sweep_width, request.coordx, request.coordy))
             
-            drones.append([request.coordx, request.coordy, request.ancho_de_barrido, request.speed, request.tof])
-            wps_metadata.add_drone(Drone_initial(request.drone_id, (request.coordx, request.coordy)), request.ancho_de_barrido)
+            drones.append([request.coordx, request.coordy, request.sweep_width, request.speed, request.tof])
+            wps_metadata.add_drone(Drone_initial(request.drone_id, (request.coordx, request.coordy)), request.sweep_width)
 
             i = i-1
             if i == 0:

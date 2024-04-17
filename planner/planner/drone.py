@@ -25,7 +25,7 @@ class Drone(Node):
         self.req.drone_id = drone_id
         self.req.speed = self.declare_parameter('speed', 30.0).get_parameter_value().double_value
         self.req.tof = self.declare_parameter('tof', 50.0).get_parameter_value().double_value
-        self.req.ancho_de_barrido = self.declare_parameter('ancho_de_barrido', 33.0).get_parameter_value().double_value
+        self.req.sweep_width = self.declare_parameter('sweep_width', 33.0).get_parameter_value().double_value
         self.req.coordx = self.declare_parameter('coordx', -200.0).get_parameter_value().double_value
         self.req.coordy = self.declare_parameter('coordy', 0.0).get_parameter_value().double_value
 
