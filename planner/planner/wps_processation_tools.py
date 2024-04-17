@@ -43,6 +43,8 @@ def same_line(point0, point1, point2) -> bool:
     return False
 
 def rm_intermediate_points(wps) -> list[np.array]:
+    if (len(wps) < 3):
+        return wps
     index = 2
     point0 = wps[0]
     point1 = wps[1]

@@ -3,7 +3,7 @@ from syst_msgs.msg import Waypoints
 import rclpy
 from rclpy.node import Node
 
-from planning_algorithm.main import verdugo
+from planning_algorithm.main import planning_algorithm
 from .wps_processation_tools import *
 
 from std_msgs.msg import Float64
@@ -24,19 +24,19 @@ class Station(Node):
         global i, flight_height
         i = self.declare_parameter('drones_quantity', 0.0).get_parameter_value().double_value
         flight_height = self.declare_parameter('flight_height', 0.0).get_parameter_value().double_value
-        self.srv = self.create_service(AdvService, '/advertisement_service', self.add_two_ints_callback)
+        self.srv = self.create_service(AdvService, '/advertisement_service', self.register_drone)
         self.exec_time_publisher = self.create_publisher(Float64, '/execution_time', 10)
 
-    def add_two_ints_callback(self, request, response):
+    def register_drone(self, request, response):
         global service_active, drones, i, wps_metadata
         
         if service_active:
             response.response = 1.0
-            self.get_logger().info('Incoming request\ndrone_id: %s speed: %d tof: %d ancho_de_barrido: %d\ncoordx: %d, coordy: %d' % (request.drone_id, \
-                            request.speed, request.tof, request.ancho_de_barrido, request.coordx, request.coordy))
+            self.get_logger().info('Incoming request\ndrone_id: %s speed: %d tof: %d sweep_width: %d\ncoordx: %d, coordy: %d' % (request.drone_id, \
+                            request.speed, request.tof, request.sweep_width, request.coordx, request.coordy))
             
-            drones.append([request.coordx, request.coordy, request.ancho_de_barrido, request.speed, request.tof])
-            wps_metadata.add_drone(Drone_initial(request.drone_id, (request.coordx, request.coordy)), request.ancho_de_barrido)
+            drones.append([request.coordx, request.coordy, request.sweep_width, request.speed, request.tof])
+            wps_metadata.add_drone(Drone_initial(request.drone_id, (request.coordx, request.coordy)), request.sweep_width)
 
             i = i-1
             if i == 0:
@@ -48,7 +48,7 @@ class Station(Node):
     
     def publish_wps(self):
         global drones, wps_metadata, flight_height
-        wps, exec_time = verdugo(drones, os.path.join(os.getcwd(), 'install/planner/share/planner/config/perimeter.yaml'), wps_metadata.flatten_str())
+        wps, exec_time = planning_algorithm(drones, os.path.join(os.getcwd(), 'install/planner/share/planner/config/perimeter.yaml'), wps_metadata.flatten_str())
         self.get_logger().info('Execution time was: %f' % exec_time)
 
         execution_time = Float64()
