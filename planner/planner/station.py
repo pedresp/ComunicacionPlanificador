@@ -3,7 +3,7 @@ from syst_msgs.msg import Waypoints
 import rclpy
 from rclpy.node import Node
 
-from planning_algorithm.main import verdugo
+from planning_algorithm.main import planning_algorithm
 from .wps_processation_tools import *
 
 import os
@@ -45,7 +45,7 @@ class Station(Node):
     
     def publish_wps(self):
         global drones, wps_metadata, flight_height
-        wps = verdugo(drones, os.path.join(os.getcwd(), 'install/planner/share/planner/config/perimeter.yaml'), wps_metadata.flatten_str())
+        wps = planning_algorithm(drones, os.path.join(os.getcwd(), 'install/planner/share/planner/config/perimeter.yaml'), wps_metadata.flatten_str())
 
         index = 0
 

@@ -37,7 +37,7 @@ import os
 #    UAVs = []
 #    for row in reader:
 #        UAVs.append(row[:])
-def verdugo(drones, path_to_area_coord: str, drones_names: list[str]):
+def planning_algorithm(drones, path_to_area_coord: str, drones_names: list[str]):
     #UAVs = readUAV()
     UAVs = drones
 
@@ -110,4 +110,4 @@ def verdugo(drones, path_to_area_coord: str, drones_names: list[str]):
 
 if __name__ == '__main__':
     UAVs = [[-200.0, 0.0, 20.0, 30.0, 48.0], [-200.0, 0.0, 10.0, 40.0, 41.0], [-200.0, 0.0, 15.0, 20.0, 81.0], [-200.0, 0.0, 5.0, 10.0, 56.0]]
-    #verdugo(UAVs)
+    #planning_algorithm(UAVs)
