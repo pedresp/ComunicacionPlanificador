@@ -21,8 +21,6 @@ class Simulation_Results(Node):
 
         exec_time = msg.data
         self.get_logger().info("Received exec time: %f "% msg.data)
-        #with open("/home/gondolior/Downloads/exec_time", "w") as fin:
-        #    fin.write(f"Execution time was: {msg.data}")
 
     def receive_drone_result(self, msg):
         self.get_logger().info("Received drone: %s" % msg.drone_id)
@@ -31,10 +29,10 @@ class Simulation_Results(Node):
         self.drones_quantity -= 1
 
         if self.drones_quantity == 0:
-            with open("/home/gondolior/Downloads/exec_time", "w") as fin:
-              fin.write(f"Execution time was: {exec_time}\n") 
+            with open("/home/gondolior/Downloads/after_simulation_metrics.csv", "w") as fin:
+              fin.write(f"algorithm_execution_time,{exec_time}\n\nUAV,Total time,Total distance\n") 
               for elem in self.drones_received:
-                  fin.write(f"{elem[0]} -> TT: {elem[1]} -> TD: {elem[2]}\n")
+                  fin.write(f"{elem[0]},{elem[1]},{elem[2]}\n")
 
 def main():
     rclpy.init()
