@@ -31,6 +31,7 @@ class WpsPublisher(Node):
         self.req.coordx = self.declare_parameter('coordx', -200.0).get_parameter_value().double_value
         self.req.coordy = self.declare_parameter('coordy', 0.0).get_parameter_value().double_value
 
+        self.get_logger().info('CALLING SERVICE')
         self.future = self.cli.call_async(self.req)
         self.future.add_done_callback(self.callback)
 
@@ -39,7 +40,7 @@ class WpsPublisher(Node):
         
         self.get_logger().info(f'drone_wps: {str(self.drone_wps)}')
 
-        self.publisher_ = self.create_publisher(WP, 'wps', 1)
+        self.publisher_ = self.create_publisher(WP, 'wps', 10)
 
     def callback(self, future):
         response = future.result()
@@ -52,6 +53,7 @@ class WpsPublisher(Node):
         self.send_msg(wps_array)
 
     def send_msg(self, drone_wps):
+        self.get_logger().info('SENDING MESSAGE FROM CONTROLLER')
         wps = self.process_waypoints(drone_wps)
 
         time.sleep(0.5)
