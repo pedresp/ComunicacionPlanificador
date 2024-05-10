@@ -5,6 +5,7 @@
 import numpy as np
 from numpy import linalg as LA
 from scipy.optimize import linear_sum_assignment
+from .estimates import InsufficientBattery
 
 
 
@@ -14,6 +15,9 @@ def get_score(total_area, scan_width, velocity, remaining_batt_time):
     scan_velocity=scan_width*velocity
     scan_time=total_area/scan_velocity
     score=remaining_batt_time/(scan_time)
+
+    with open('/home/gondolior/Vault/scores.txt', 'a') as file:
+        file.write(f'scan: {scan_width}  velocity: {velocity} remaining_batt: {remaining_batt_time}  score: {score}\n')
     return score
 
 
@@ -24,6 +28,11 @@ def get_UAV_score_list(UAV, total_area):
         score_list.append(score)
         #print(score)
 
+    sum_score = sum(score_list)
+    if sum_score < 1:
+        error_message = f'score -> {sum_score} is less than 1, it could not be able to fulfill the mission with the current battery values.'
+        raise InsufficientBattery(error_message)
+        
     normalized_score=normalize_values(score_list)
     return normalized_score
 

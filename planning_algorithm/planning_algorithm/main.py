@@ -22,6 +22,8 @@ from .spiral import *
 from .back_and_forth import *
 
 from .readcsv import readUAV
+from .estimates import *
+
 import yaml
 import rospkg
 import os
@@ -58,6 +60,7 @@ def planning_algorithm(drones, path_to_area_coord: str, drones_names: list[str])
     start=time.time()
     total_area=get_polygon_area(convex_limits)
 
+    estimate_new_battery(UAVs, convex_limits)
     scores=get_UAV_score_list(UAVs, total_area)
 
     #UAV score dictionary
