@@ -112,7 +112,9 @@ class Publisher(Node):
         previous_speed = current_speed
         near_point = calculate_near_point(calculate_overtake_speed(calculate_angle(current, next_wp, subsequent)), MAX_SPEED) * 2.0
         self.get_logger().info(f'Vf: {calculate_overtake_speed(calculate_angle(current, next_wp, subsequent))} Vi: {MAX_SPEED}')
-        in_point = distance(current, next_wp) * 0.1
+        distance_ = distance(current, next_wp) * 0.1
+        in_point = 5 if distance_ > 5 else distance_ 
+        #in_point = distance(current, next_wp) * 0.1
         self.get_logger().info(f'NEAR POINT CALCULATED: {near_point + in_point}')
         while distance(current, next_wp) > in_point:
             if distance(current, next_wp) > near_point+in_point:
