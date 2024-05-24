@@ -8,7 +8,7 @@ exec_time = -1.0
 
 class Planner_Monitor(Node):
     def __init__(self):
-        super().__init__('Simulation_Results')
+        super().__init__('Planner_Monitor')
 
         self.drones_quantity = self.declare_parameter('drones_quantity', 0.0).get_parameter_value().double_value
         self.drones_received = []
