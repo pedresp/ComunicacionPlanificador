@@ -6,7 +6,7 @@ from sim_msgs.msg import DroneResults
 
 exec_time = -1.0
 
-class Simulation_Results(Node):
+class Planner_Monitor(Node):
     def __init__(self):
         super().__init__('Simulation_Results')
 
@@ -37,9 +37,9 @@ class Simulation_Results(Node):
 def main():
     rclpy.init()
 
-    simulation_results = Simulation_Results()
+    planner_monitor= Planner_Monitor()
 
-    rclpy.spin(simulation_results)
+    rclpy.spin(planner_monitor)
 
     rclpy.shutdown()
 
