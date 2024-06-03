@@ -8,15 +8,15 @@ from scipy.optimize import linear_sum_assignment
 from .estimates import InsufficientBattery
 
 
-
-#def get_score(UAV_list, UAV_area):
+import pwd, os
+#def get_score(UAV_list, UAV_area)
 
 def get_score(total_area, scan_width, velocity, remaining_batt_time):
     scan_velocity=scan_width*velocity
     scan_time=total_area/scan_velocity
     score=remaining_batt_time/(scan_time)
 
-    with open('/home/gondolior/Vault/scores.txt', 'a') as file:
+    with open(f'/home/{pwd.getpwuid(os.getuid()).pw_name}/sim_stats/scores.txt', 'a') as file:
         file.write(f'scan: {scan_width}  velocity: {velocity} remaining_batt: {remaining_batt_time}  score: {score}\n')
     return score
 
@@ -29,6 +29,8 @@ def get_UAV_score_list(UAV, total_area):
         #print(score)
 
     sum_score = sum(score_list)
+    with open('/home/gondolior/Vault/scores.txt', 'a') as file:
+        file.write(f'total score: {sum_score}\n')
     if sum_score < 1:
         error_message = f'score -> {sum_score} is less than 1, it could not be able to fulfill the mission with the current battery values.'
         raise InsufficientBattery(error_message)

@@ -27,6 +27,7 @@ from .estimates import *
 import yaml
 import rospkg
 import os
+import pwd
 
 # opening the 'csv' file for testing
 
@@ -56,6 +57,9 @@ def planning_algorithm(drones, path_to_area_coord: str, drones_names: list[str])
     limits,x,y=get_polygon2(perimeter['areas'][0]['area']['coords'])
 
     convex_limits=convex_hull_fun(limits)
+    sim_stats_f = f'/home/{pwd.getpwuid(os.getuid()).pw_name}/sim_stats/'
+    for file in os.listdir(sim_stats_f):
+        os.remove(sim_stats_f + file)
 
     start=time.time()
     total_area=get_polygon_area(convex_limits)
@@ -66,7 +70,7 @@ def planning_algorithm(drones, path_to_area_coord: str, drones_names: list[str])
     #UAV score dictionary
     scan_dict=classify_by_scan(UAVs, scores)
 
-    print (scan_dict)
+    #print (scan_dict)
     #print (w_class)
 
 
