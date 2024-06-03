@@ -12,7 +12,7 @@ class AreaVis(Node):
         super().__init__('areavis')
         
         self.area_publisher = self.create_publisher(Marker, '/area_info', 10) #topic where lines are going to be send
-        self.timer_ = self.create_timer(1.3, self.publish_line)
+        self.timer_ = self.create_timer(1, self.publish_line)
 
         self.wps  = {} #vertex of the area 
         with open(f'/home/{pwd.getpwuid(os.getuid()).pw_name}/sim_stats/area.yaml', 'r') as y:
@@ -26,7 +26,11 @@ class AreaVis(Node):
 
     def publish_line(self):
         self.get_logger().info('Timer called')
-        if self.identity < self.vertex_quantity - 1: 
+        if self.identity < self.vertex_quantity:
+
+            next = (self.identity+1)%self.vertex_quantity
+
+            self.get_logger().info("%d %d" % (self.identity, next))
             marker = Marker()
 
             marker.header.frame_id = "map"
@@ -37,10 +41,10 @@ class AreaVis(Node):
             marker.type = Marker.LINE_STRIP
             marker.action = Marker.ADD
 
-            marker.color.r = 0.0
+            marker.color.r = 1.0
             marker.color.g = 0.0
             marker.color.b = 0.0
-            marker.color.a = 0.0
+            marker.color.a = 1.0
 
             marker.scale.x = 0.5
 
@@ -50,12 +54,12 @@ class AreaVis(Node):
             p.x = self.wps[self.identity]['x']
             p.y = self.wps[self.identity]['y']
             p.z = 0.0
-            q.x = self.wps[self.identity+1]['x']
-            q.y = self.wps[self.identity+1]['y']
+            q.x = self.wps[next]['x']
+            q.y = self.wps[next]['y']
             q.z = 0.0
 
             marker.points.append(p)
-            marker.points.append(p)
+            marker.points.append(q)
 
             self.area_publisher.publish(marker)
             self.identity += 1 
@@ -64,6 +68,7 @@ def main():
     rclpy.init()
     areavis = AreaVis()
     rclpy.spin(areavis)
+    areavis.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':
