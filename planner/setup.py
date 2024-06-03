@@ -26,7 +26,8 @@ setup(
         'console_scripts': [
             'drone = planner.drone:main',
             'station = planner.station:main',
-            'planner_monitor = planner.planner_monitor:main'
+            'planner_monitor = planner.planner_monitor:main',
+            'trayectories_manager = planner.trayectories_manager:main'
         ],
     },
 )

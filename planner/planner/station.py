@@ -1,5 +1,5 @@
 from syst_msgs.srv import AdvService
-from syst_msgs.msg import Waypoints
+from syst_msgs.msg import Waypoints, DronesList
 import rclpy
 from rclpy.node import Node
 
@@ -27,6 +27,8 @@ class Station(Node):
         self.srv = self.create_service(AdvService, '/advertisement_service', self.register_drone)
         self.exec_time_publisher = self.create_publisher(Float64, '/execution_time', 10)
 
+        self.droneslist = self.create_publisher(DronesList, '/droneslist', 10)
+
     def register_drone(self, request, response):
         global service_active, drones, i, wps_metadata
         
@@ -40,6 +42,11 @@ class Station(Node):
 
             i = i-1
             if i == 0:
+                dl = wps_metadata.flatten_str()
+                message = DronesList()
+                message.droneslist = dl 
+                self.droneslist.publish(message)
+                
                 service_active = False
                 self.publish_wps()
             return response
