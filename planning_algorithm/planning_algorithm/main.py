@@ -58,7 +58,9 @@ def planning_algorithm(drones, path_to_area_coord: str, drones_names: list[str])
 
     convex_limits=convex_hull_fun(limits)
     sim_stats_f = f'/home/{pwd.getpwuid(os.getuid()).pw_name}/sim_stats/'
-    for file in os.listdir(sim_stats_f):
+    files = os.listdir(sim_stats_f)
+    files.remove('area.yaml')
+    for file in files: 
         os.remove(sim_stats_f + file)
 
     start=time.time()
