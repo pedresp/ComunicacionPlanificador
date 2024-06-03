@@ -4,6 +4,7 @@ from std_msgs.msg import Float64
 
 from sim_msgs.msg import DroneResults
 
+import pwd, os
 exec_time = -1.0
 
 class Planner_Monitor(Node):
@@ -29,7 +30,7 @@ class Planner_Monitor(Node):
         self.drones_quantity -= 1
 
         if self.drones_quantity == 0:
-            with open("/home/gondolior/Downloads/after_simulation_metrics.csv", "w") as fin:
+            with open(f"/home/{pwd.getpwuid(os.getuid()).pw_name}/sim_stats/after_simulation_metrics.csv", "w") as fin:
               fin.write(f"algorithm_execution_time,{exec_time}\n\nUAV,Total time,Total distance\n") 
               for elem in self.drones_received:
                   fin.write(f"{elem[0]},{elem[1]},{elem[2]}\n")
