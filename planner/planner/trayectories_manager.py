@@ -50,7 +50,7 @@ class Trayectories_Manager(Node):
     def write_coord(self, msg):
         self.get_logger().info("Activado callback")
 
-        self.file.write(f'{msg.pose.position.x}, {msg.pose.position.y}, {msg.pose.position.z}\n')
+        self.file.write(f'{msg.pose.position.x},{msg.pose.position.y},{msg.pose.position.z}\n')
 
 class Trayectory_Listener(Node):
     def __init__(self, drone_id):

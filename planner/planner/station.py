@@ -8,7 +8,7 @@ from .wps_processation_tools import *
 
 from std_msgs.msg import Float64
 
-import os
+import os, pwd
 
 i = 0
 flight_height = 0
@@ -78,8 +78,12 @@ class Station(Node):
                 msg = Waypoints()
                 msg.wps = array_to_send.flatten().tolist()
 
+                with open(f'/home/{pwd.getpwuid(os.getuid()).pw_name}/sim_stats/planned-{drones_names[index].name}.csv', 'w') as file:
+                    for array in  array_to_send:
+                        file.write(f'{array[0]},{array[1]},{array[2]}\n')
+
                 publisher.publish(msg)
-                self.get_logger().info('Publishing: "%s"' % drones_names[index])
+                self.get_logger().info('Publishing: "%s"' % drones_names[index].name)
                 index = index + 1
 
 def main():
