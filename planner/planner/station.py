@@ -78,7 +78,7 @@ class Station(Node):
                 msg = Waypoints()
                 msg.wps = array_to_send.flatten().tolist()
 
-                with open(f'/home/{pwd.getpwuid(os.getuid()).pw_name}/sim_stats/planned-{drones_names[index].name}.csv', 'w') as file:
+                with open(f'/home/{pwd.getpwuid(os.getuid()).pw_name}/sim_stats/{drones_names[index].name}-planned.csv', 'w') as file:
                     for array in  array_to_send:
                         file.write(f'{array[0]},{array[1]},{array[2]}\n')
 

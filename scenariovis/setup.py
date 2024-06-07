@@ -23,7 +23,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'areavis = scenariovis.areavis:main'
+            'areavis = scenariovis.areavis:main',
+            'visman = scenariovis.vismanager:main'
         ],
     },
 )

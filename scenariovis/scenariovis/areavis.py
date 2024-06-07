@@ -12,7 +12,7 @@ class AreaVis(Node):
         super().__init__('areavis')
         
         self.area_publisher = self.create_publisher(Marker, '/area_info', 10) #topic where lines are going to be send
-        self.timer_ = self.create_timer(1, self.publish_line)
+        self.timer_ = self.create_timer(1.0, self.publish_line)
 
         self.wps  = {} #vertex of the area 
         with open(f'/home/{pwd.getpwuid(os.getuid()).pw_name}/sim_stats/area.yaml', 'r') as y:
@@ -25,9 +25,8 @@ class AreaVis(Node):
 
 
     def publish_line(self):
-        self.get_logger().info('Timer called')
         if self.identity < self.vertex_quantity:
-
+            self.get_logger().info('Timer called')
             next = (self.identity+1)%self.vertex_quantity
 
             self.get_logger().info("%d %d" % (self.identity, next))
@@ -41,12 +40,12 @@ class AreaVis(Node):
             marker.type = Marker.LINE_STRIP
             marker.action = Marker.ADD
 
-            marker.color.r = 1.0
+            marker.color.r = 0.0
             marker.color.g = 0.0
             marker.color.b = 0.0
             marker.color.a = 1.0
 
-            marker.scale.x = 0.5
+            marker.scale.x = 1.0
 
             p = Point()
             q = Point()

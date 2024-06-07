@@ -58,7 +58,7 @@ class Trayectory_Listener(Node):
 
         self.drone_name = drone_id
         self.subscriber_ = self.create_subscription(PoseStamped, f'/{drone_id}/pose', self.write_coord, 10)
-        self.file = open(f'/home/{pwd.getpwuid(os.getuid()).pw_name}/sim_stats/{drone_id}_poses.csv', 'w')
+        self.file = open(f'/home/{pwd.getpwuid(os.getuid()).pw_name}/sim_stats/{drone_id}-poses.csv', 'w')
 
         rclpy.get_default_context().on_shutdown(self.close_file)
     
