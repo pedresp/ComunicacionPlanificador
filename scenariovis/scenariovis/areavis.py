@@ -66,9 +66,14 @@ class AreaVis(Node):
 def main():
     rclpy.init()
     areavis = AreaVis()
-    rclpy.spin(areavis)
-    areavis.destroy_node()
-    rclpy.shutdown()
+    try:
+        rclpy.spin(areavis)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        areavis.destroy_node()
+        if rclpy.ok():
+            rclpy.shutdown()
 
 if __name__ == '__main__':
     main()
