@@ -142,8 +142,10 @@ class Real_Path(Node):
 
     def publish_route(self):
         for i in range(self.point_quantity):
-            time.sleep(0.1)
+            time.sleep(0.5)
             self.publish_line()
+
+        self.get_logger().info("PUBLISHED: %s" % self.point_quantity)
 
     def publish_line(self):
         if self.index < self.point_quantity - 1:
@@ -155,30 +157,46 @@ class Real_Path(Node):
 
             marker.ns = f"{self.drone_id}@realpath"
             marker.id = self.index
-            marker.type = Marker.LINE_STRIP
+            marker.type = Marker.CYLINDER
             marker.action = Marker.ADD
+
+            current_point = np.array([self.path[self.index][0], self.path[self.index][1], self.path[self.index][2]])
+            next_point = np.array([self.path[next][0], self.path[next][1], self.path[next][2]])
+
+            middle_point = (current_point + next_point) / 2.0 #calculate center of the cylinder
+            points_vector = next_point - current_point #vector determined by current-next points
+
+            pv_module = np.linalg.norm(points_vector) #calculate point_vector module == distance between current-next points 
+            norm_pv = points_vector / pv_module #normalize pv vector
+
+            axis_z = np.array([0.0, 0.0, 1.0])
+            rotation_axis = np.cross(axis_z, norm_pv)
+            if np.linalg.norm(rotation_axis) == 0:
+                quaternion = np.array([1.0, 0.0, 0.0, 0.0]) #quaternion describing the turn (w,x,y,z)
+            else:
+                norm_rotation_axis = rotation_axis/ np.linalg.norm(rotation_axis)
+                zpv_angle = np.arccos(np.dot(axis_z, norm_pv)) #angle between z axis an points vector
+                #calculate quaternion of the turn
+                quaternion = np.concatenate(([np.cos(zpv_angle / 2.0)], norm_rotation_axis * np.sin(zpv_angle / 2.0)))
+
+            marker.pose.position.x = middle_point[0]
+            marker.pose.position.y = middle_point[1]
+            marker.pose.position.z = middle_point[2]
+
+            marker.pose.orientation.w = quaternion[0]
+            marker.pose.orientation.x = quaternion[1]
+            marker.pose.orientation.y = quaternion[2]
+            marker.pose.orientation.z = quaternion[3]
+
+            marker.scale.x = 0.5
+            marker.scale.y = 0.5
+            marker.scale.z = pv_module
 
             marker.color.r = self.color[0] 
             marker.color.g = self.color[1]
             marker.color.b = self.color[2]
             marker.color.a = 1.0
 
-            marker.scale.x = 1.0
-            marker.scale.y = 1.0
-            marker.scale.z = 1.0
-
-            p = Point()
-            q = Point()
-
-            p.x = self.path[self.index][0]
-            p.y = self.path[self.index][1]
-            p.z = self.path[self.index][2]
-            q.x = self.path[next][0]
-            q.y = self.path[next][1]
-            q.z = self.path[self.index][2]
-
-            marker.points.append(p)
-            marker.points.append(q)
 
             self.rp_publisher.publish(marker)
             self.index += 1 
