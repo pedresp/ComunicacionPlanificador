@@ -10,6 +10,8 @@ from .BST import BST
 import os, pwd, time
 import threading
 
+import numpy as np
+
 route = f'/home/{pwd.getpwuid(os.getuid()).pw_name}/sim_stats/'
 
 def spin_printtray(planned_node):
@@ -82,7 +84,7 @@ class Planned_Path(Node):
 
             marker.ns = f"{self.drone_id}@plannedpath"
             marker.id = self.index
-            marker.type = Marker.LINE_STRIP
+            marker.type = Marker.CYLINDER
             marker.action = Marker.ADD
 
             marker.color.r = 1.0
@@ -90,22 +92,37 @@ class Planned_Path(Node):
             marker.color.b = 1.0
             marker.color.a = 1.0
 
-            marker.scale.x = 1.0 
-            marker.scale.y = 1.0
-            marker.scale.z = 1.0
+            current_point = np.array([self.path[self.index][0], self.path[self.index][1], 0.0])
+            next_point = np.array([self.path[next][0], self.path[next][1], 0.0])
 
-            p = Point()
-            q = Point()
+            middle_point = (current_point + next_point) / 2.0 #calculate center of the cylinder
+            points_vector = next_point - current_point #vector determined by current-next points
 
-            p.x = self.path[self.index][0]
-            p.y = self.path[self.index][1]
-            p.z = 0.0
-            q.x = self.path[next][0]
-            q.y = self.path[next][1]
-            q.z = 0.0
+            pv_module = np.linalg.norm(points_vector) #calculate point_vector module == distance between current-next points 
+            norm_pv = points_vector / pv_module #normalize pv vector
 
-            marker.points.append(p)
-            marker.points.append(q)
+            axis_z = np.array([0.0, 0.0, 1.0])
+            rotation_axis = np.cross(axis_z, norm_pv)
+            if np.linalg.norm(rotation_axis) == 0:
+                quaternion = np.array([1.0, 0.0, 0.0, 0.0]) #quaternion describing the turn (w,x,y,z)
+            else:
+                norm_rotation_axis = rotation_axis/ np.linalg.norm(rotation_axis)
+                zpv_angle = np.arccos(np.dot(axis_z, norm_pv)) #angle between z axis an points vector
+                #calculate quaternion of the turn
+                quaternion = np.concatenate(([np.cos(zpv_angle / 2.0)], norm_rotation_axis * np.sin(zpv_angle / 2.0)))
+
+            marker.pose.position.x = middle_point[0]
+            marker.pose.position.y = middle_point[1]
+            marker.pose.position.z = middle_point[2]
+
+            marker.pose.orientation.w = quaternion[0]
+            marker.pose.orientation.x = quaternion[1]
+            marker.pose.orientation.y = quaternion[2]
+            marker.pose.orientation.z = quaternion[3]
+
+            marker.scale.x = 0.5
+            marker.scale.y = 0.5
+            marker.scale.z = pv_module
 
             self.pp_publisher.publish(marker)
             self.index += 1 
