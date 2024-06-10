@@ -23,9 +23,12 @@ class Vismanager(Node):
         super().__init__('vismanager')
         self.pps = {} #map containing all planned paths
 
+        time.sleep(2)
         #self.mthreaded_planned = MultiThreadedExecutor()
         self.planned_threads = []
         self.real_threads = []
+
+        self.colors = [(1.0, 0.0, 0.0), (0.0, 1.0, 1.0), (0.0, 1.0, 0.0), (1.0, 0.0, 1.0), (0.0, 0.0, 1.0), (1.0, 1.0, 0.0)]
 
         bst = None 
         ppf = [file for file in os.listdir(f'{route}') if file.endswith('-planned.csv')] #lst of files containing planned paths
@@ -40,12 +43,15 @@ class Vismanager(Node):
             self.planned_threads.append(threading.Thread(target=spin_printtray, args=(ppn,))) 
             self.planned_threads[-1].start() 
         
+        i = 0
         for file in bst.get_names():
             path = readCSV(f'{route}{file}-poses.csv')
 
-            rpn = Real_Path(file, path, (0.0, 1.0, 0.0))
+            rpn = Real_Path(file, path, self.colors[i])
             self.real_threads.append(threading.Thread(target=spin_printtray, args=(rpn,)))
             self.real_threads[-1].start()
+
+            i = (i+1)%6
 
         for thread in self.planned_threads:
             thread.join()
@@ -87,9 +93,9 @@ class Planned_Path(Node):
             marker.type = Marker.CYLINDER
             marker.action = Marker.ADD
 
-            marker.color.r = 1.0
-            marker.color.g = 0.0
-            marker.color.b = 1.0
+            marker.color.r = 0.196
+            marker.color.g = 0.329
+            marker.color.b = 0.243
             marker.color.a = 1.0
 
             current_point = np.array([self.path[self.index][0], self.path[self.index][1], 0.0])
