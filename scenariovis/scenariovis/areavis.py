@@ -6,6 +6,7 @@ from geometry_msgs.msg import Point
 
 import yaml
 import os, pwd
+import numpy as np
 
 class AreaVis(Node):
     def __init__(self):
@@ -37,7 +38,7 @@ class AreaVis(Node):
 
             marker.ns = "areavis"
             marker.id = self.identity
-            marker.type = Marker.LINE_STRIP
+            marker.type = Marker.CYLINDER
             marker.action = Marker.ADD
 
             marker.color.r = 0.0
@@ -45,20 +46,37 @@ class AreaVis(Node):
             marker.color.b = 0.0
             marker.color.a = 1.0
 
-            marker.scale.x = 1.0
+            current_point = np.array([self.wps[self.identity]['x'], self.wps[self.identity]['y'], 0.0])
+            next_point = np.array([self.wps[next]['x'], self.wps[next]['y'], 0.0])
 
-            p = Point()
-            q = Point()
+            middle_point = (current_point + next_point) / 2.0 #calculate center of the cylinder
+            points_vector = next_point - current_point #vector determined by current-next points
 
-            p.x = self.wps[self.identity]['x']
-            p.y = self.wps[self.identity]['y']
-            p.z = 0.0
-            q.x = self.wps[next]['x']
-            q.y = self.wps[next]['y']
-            q.z = 0.0
+            pv_module = np.linalg.norm(points_vector) #calculate point_vector module == distance between current-next points 
+            norm_pv = points_vector / pv_module #normalize pv vector
 
-            marker.points.append(p)
-            marker.points.append(q)
+            axis_z = np.array([0.0, 0.0, 1.0])
+            rotation_axis = np.cross(axis_z, norm_pv)
+            if np.linalg.norm(rotation_axis) == 0:
+                quaternion = np.array([1.0, 0.0, 0.0, 0.0]) #quaternion describing the turn (w,x,y,z)
+            else:
+                norm_rotation_axis = rotation_axis/ np.linalg.norm(rotation_axis)
+                zpv_angle = np.arccos(np.dot(axis_z, norm_pv)) #angle between z axis an points vector
+                #calculate quaternion of the turn
+                quaternion = np.concatenate(([np.cos(zpv_angle / 2.0)], norm_rotation_axis * np.sin(zpv_angle / 2.0)))
+
+            marker.pose.position.x = middle_point[0]
+            marker.pose.position.y = middle_point[1]
+            marker.pose.position.z = middle_point[2]
+
+            marker.pose.orientation.w = quaternion[0]
+            marker.pose.orientation.x = quaternion[1]
+            marker.pose.orientation.y = quaternion[2]
+            marker.pose.orientation.z = quaternion[3]
+
+            marker.scale.x = 0.5
+            marker.scale.y = 0.5
+            marker.scale.z = pv_module
 
             self.area_publisher.publish(marker)
             self.identity += 1 
