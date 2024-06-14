@@ -1,5 +1,0 @@
-launch:
-  - node:
-      pkg: scenariovis
-      exec: areavis
-      name: areavis
