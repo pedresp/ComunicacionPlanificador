@@ -5,3 +5,4 @@ simplesim/rviz
 simplesim/launch/my_launcher_drones.launch.py
 planificador/
 planner/config/perimeter.yaml
+scenariovis/rviz
