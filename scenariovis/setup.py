@@ -26,7 +26,8 @@ setup(
         'console_scripts': [
 	    'axisvis = scenariovis.axisvis:main',
             'areavis = scenariovis.areavis:main',
-            'visman = scenariovis.vismanager:main'
+            'visman = scenariovis.vismanager:main',
+            'walls = scenariovis.walls:main'
         ],
     },
 )

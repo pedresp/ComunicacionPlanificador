@@ -13,26 +13,27 @@ class AxisVis(Node):
         super().__init__('axisvis')
         
         self.x= self.create_publisher(Marker, 'xview', 30) #topic where lines are going to be send
-        self.ident= 0
-#        self.timer_ = self.create_timer(1.0, self.publish_line)
+        self.ident= 1
 
-        for j in range(-250, 250, 25):
+        time.sleep(2)
+        self.publish_text(0, [-200.0,-100.0, 0.0], "0.0")
+
+        for j in range(0, 300, 50):
             i = float(j)
-            self.publish_line(self.ident, [i, 0.0, 0.0], [i+25.0,0.0,0.0])        
-            self.publish_text(self.ident+1, [i+25, 0.0, 0.,0], str(i+25))
+            self.publish_line(self.ident, [i-200.0, -100.0 + 0.0, 0.0], [i+50.0-200.0, -100.0 + 0.0,0.0])        
+            self.publish_text(self.ident+1, [-200.0+i+50, -100.0+0.0, 0.,0], str(i+50))
             self.ident += 2 
 
-        for j in range(-250,250,25):
+        for j in range(0,250,50):
             i = float(j)
-            self.publish_line(self.ident, [0.0, i, 0.0], [0.0, i+25.0, 0.0])
-        #self.get_logger().info('%d', self.wps)
-            self.publish_text(self.ident+1, [0.0, i+25, 0.0], str(i+25))
+            self.publish_line(self.ident, [-200.0+0.0, i-100.0, 0.0], [-200.0-0.0, i+50.0-100.0, 0.0])
+            self.publish_text(self.ident+1, [-200.0+0.0, -100.0+i+50, 0.0], str(i+50))
             self.ident += 2 
 
-        for j in range(0, 25, 5):
+        for j in range(0, 20, 10):
             i = float(j)
-            self.publish_line(self.ident, [0.0,0.0,i], [0.0,0.0,i+5.0])
-            self.publish_text(self.ident+1, [0.0, 0.0, i+5], str(i+5))
+            self.publish_line(self.ident, [50.0, -100.0 +0.0,i], [50.0, -100.0 + 0.0,i+10.0])
+            self.publish_text(self.ident+1, [50.0, -100.0+0.0, i+10], str(i+10))
             self.ident += 2
 
     def publish_text(self, i, position, text):
@@ -43,18 +44,18 @@ class AxisVis(Node):
         marker.id = int(i)
         marker.type = Marker.TEXT_VIEW_FACING
         marker.action = Marker.ADD
-        marker.scale.z = 2.0
+        marker.scale.z = 5.0
 
-        marker.scale.x = 2.0
-        marker.scale.y = 2.0
+        marker.scale.x = 5.0
+        marker.scale.y = 5.0
 
         marker.pose.position.x = 5.0 if position[1] == 0 and position[0] == 0 else position[0]
         marker.pose.position.y = position[1]
-        marker.pose.position.z = 5.0 if position[2] == 0 else position[2]
+        marker.pose.position.z = -5.0 if position[2] == 0 else position[2]
 
         marker.text = text
         marker.color.r = 0.0
-        marker.color.g = 1.0
+        marker.color.g = 0.0
         marker.color.b = 0.0
         marker.color.a = 1.0
 

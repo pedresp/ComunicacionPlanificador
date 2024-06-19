@@ -96,7 +96,7 @@ class Planned_Path(Node):
             marker.color.r = 0.196
             marker.color.g = 0.329
             marker.color.b = 0.243
-            marker.color.a = 1.0
+            marker.color.a = 0.8
 
             current_point = np.array([self.path[self.index][0], self.path[self.index][1], 0.0])
             next_point = np.array([self.path[next][0], self.path[next][1], 0.0])
@@ -148,7 +148,7 @@ class Real_Path(Node):
 
     def publish_route(self):
         for i in range(self.point_quantity):
-            time.sleep(0.5)
+            time.sleep(0.15)
             self.publish_line()
 
         self.get_logger().info("PUBLISHED: %s" % self.point_quantity)
