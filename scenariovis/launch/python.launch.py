@@ -28,14 +28,19 @@ def generate_launch_description():
         name="areavis"
     ) 
 
+    axis = launch_ros.actions.Node(
+        package="scenariovis",
+        executable="axisvis",
+        name="axisvis"
+    )
     visman = launch_ros.actions.Node(
         package='scenariovis',
         executable='visman',
-        name='visman'
     )
     
     return LaunchDescription([
             rviz_node,
             area,
+            axis,
             visman
         ])
