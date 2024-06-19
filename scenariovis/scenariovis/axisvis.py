@@ -18,13 +18,13 @@ class AxisVis(Node):
         time.sleep(2)
         self.publish_text(0, [-200.0,-100.0, 0.0], "0.0")
 
-        for j in range(0, 300, 50):
+        for j in range(0, 350, 50):
             i = float(j)
             self.publish_line(self.ident, [i-200.0, -100.0 + 0.0, 0.0], [i+50.0-200.0, -100.0 + 0.0,0.0])        
             self.publish_text(self.ident+1, [-200.0+i+50, -100.0+0.0, 0.,0], str(i+50))
             self.ident += 2 
 
-        for j in range(0,250,50):
+        for j in range(0,350,50):
             i = float(j)
             self.publish_line(self.ident, [-200.0+0.0, i-100.0, 0.0], [-200.0-0.0, i+50.0-100.0, 0.0])
             self.publish_text(self.ident+1, [-200.0+0.0, -100.0+i+50, 0.0], str(i+50))
@@ -32,8 +32,8 @@ class AxisVis(Node):
 
         for j in range(0, 20, 10):
             i = float(j)
-            self.publish_line(self.ident, [50.0, -100.0 +0.0,i], [50.0, -100.0 + 0.0,i+10.0])
-            self.publish_text(self.ident+1, [50.0, -100.0+0.0, i+10], str(i+10))
+            self.publish_line(self.ident, [145.0, -100.0 +0.0,i], [145.0, -100.0 + 0.0,i+10.0])
+            self.publish_text(self.ident+1, [145.0, -100.0+0.0, i+10], str(i+10))
             self.ident += 2
 
     def publish_text(self, i, position, text):

@@ -141,14 +141,14 @@ class Real_Path(Node):
         self.path = path
         self.color = color
 
-        self.rp_publisher = self.create_publisher(Marker, 'realpath', 400)
+        self.rp_publisher = self.create_publisher(Marker, 'realpath', 700)
 
         self.point_quantity = len(path)
         self.index = 0
 
     def publish_route(self):
         for i in range(self.point_quantity):
-            time.sleep(0.15)
+            time.sleep(0.2)
             self.publish_line()
 
         self.get_logger().info("PUBLISHED: %s" % self.point_quantity)

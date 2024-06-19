@@ -11,15 +11,16 @@ class PlaneWithGridPublisher(Node):
         self.publisher_ = self.create_publisher(Marker, 'walls', 10)
         self.get_logger().info('PREPARING WALL')
         time.sleep(3)
-        self.publish_markers([0.0, 200.0, 50.0], [500.0, 0.01, 100.0])
+        self.publish_markers(0, [-27.5, 200.1, 50.0], [345.0, 0.01, 100.0])
+        self.publish_markers(1, [145.1, 50.0, 50.0], [0.01, 300.0, 100.0])
 
-    def publish_markers(self, posit, wide):
+    def publish_markers(self, wid, posit, wide):
         # Crear el marcador de plano
         plane_marker = Marker()
         plane_marker.header.frame_id = "map"
         plane_marker.header.stamp = self.get_clock().now().to_msg()
         plane_marker.ns = "walls"
-        plane_marker.id = 0
+        plane_marker.id = wid
         plane_marker.type = Marker.CUBE
         plane_marker.action = Marker.ADD
         plane_marker.pose.position.x = posit[0]
