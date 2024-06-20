@@ -9,11 +9,11 @@ import numpy as np
 
 drone_id = ''
 
-class WpsPublisher(Node):
+class Controller(Node):
     def __init__(self):
         global drone_id
 
-        super().__init__('wps_publisher')
+        super().__init__('controller')
 
         self.cli = self.create_client(AdvService, '/advertisement_service')
         drone_id = self.declare_parameter('drone_id', 'drone_x').get_parameter_value().string_value
@@ -92,8 +92,8 @@ class WpsPublisher(Node):
 
 def main():
     rclpy.init()
-    wps_publisher = WpsPublisher()
-    rclpy.spin(wps_publisher)
+    controller= Controller()
+    rclpy.spin(controller)
 
 if __name__ == '__main__':
     main()
