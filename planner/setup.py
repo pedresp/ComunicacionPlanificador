@@ -27,7 +27,7 @@ setup(
             'drone = planner.drone:main',
             'station = planner.station:main',
             'planner_monitor = planner.planner_monitor:main',
-            'trayectories_manager = planner.trayectories_manager:main'
+            'listeners = planner.listeners:main'
         ],
     },
 )

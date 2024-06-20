@@ -7,9 +7,9 @@ from syst_msgs.msg import DronesList
 
 import os, pwd
 
-class Trayectories_Manager(Node):
+class Listener_Manager(Node):
     def __init__(self):
-        super().__init__('Trayectories_Manager')
+        super().__init__('listener_manager')
 
         self.subscriber_ = self.create_subscription(DronesList, '/droneslist', self.spawn_listeners, 10)
 
@@ -21,15 +21,15 @@ class Trayectories_Manager(Node):
         tlist = []
         m = msg.droneslist
         for i in m:
-            self.get_logger().info(f'DROOOOOOOOOOOOOOOOONE {i}')
+            self.get_logger().info(f'DRONE {i} will spawn')
 
         for dn in m:
-            self.get_logger().info(f'LOGGGERT ISSS {dn}, {len(m)}')
-            tl = Trayectory_Listener(dn)
+            self.get_logger().info(f'spawnning drone {dn} of a total of {len(m)}')
+            tl = Trajectory_Listener(dn)
             tlist.append(tl)
             mt_executor.add_node(tl)
         
-        self.get_logger().info("NOW SPIIIIIIIIIIIIIIIIIIIIIIIIINING")
+        self.get_logger().info("NOW SPINNING")
         try:
             mt_executor.spin()
             mt_executor.shutdown()
@@ -52,9 +52,9 @@ class Trayectories_Manager(Node):
 
         self.file.write(f'{msg.pose.position.x},{msg.pose.position.y},{msg.pose.position.z}\n')
 
-class Trayectory_Listener(Node):
+class Trajectory_Listener(Node):
     def __init__(self, drone_id):
-        super().__init__('trayectory_listener', namespace=drone_id)
+        super().__init__('trajectory_listener', namespace=drone_id)
 
         self.drone_name = drone_id
         self.subscriber_ = self.create_subscription(PoseStamped, f'/{drone_id}/pose', self.write_coord, 10)
@@ -72,13 +72,13 @@ class Trayectory_Listener(Node):
 
 def main():
     rclpy.init()
-    dtray = Trayectories_Manager()
+    lm = Listener_Manager()
     try:
-        rclpy.spin(dtray)
+        rclpy.spin(lm)
     except KeyboardInterrupt:
-        dtray.close_file() 
+        lm.close_file() 
     finally:
-        dtray.destroy_node()
+        lm.destroy_node()
         if rclpy.ok():
             rclpy.shutdown()
 
