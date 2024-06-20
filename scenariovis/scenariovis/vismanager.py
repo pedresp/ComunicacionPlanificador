@@ -37,7 +37,7 @@ class Vismanager(Node):
             name = file.split('-planned.csv')[0]
 
             bst = BST.add_node(bst, BST(path[1][1], name))
-            ppn = Planned_Path(name, path) 
+            ppn = PP_Publisher(name, path) 
 
             #self.mthreaded_planned.add_node(ppn)
             self.planned_threads.append(threading.Thread(target=spin_printtray, args=(ppn,))) 
@@ -47,7 +47,7 @@ class Vismanager(Node):
         for file in bst.get_names():
             path = readCSV(f'{route}{file}-poses.csv')
 
-            rpn = Real_Path(file, path, self.colors[i])
+            rpn = RP_Publisher(file, path, self.colors[i])
             self.real_threads.append(threading.Thread(target=spin_printtray, args=(rpn,)))
             self.real_threads[-1].start()
 
@@ -62,7 +62,7 @@ class Vismanager(Node):
         #self.mthreaded_planned.shutdown()
 
 
-class Planned_Path(Node):
+class PP_Publisher(Node):
     def __init__(self, drone_id, path):
         super().__init__('planned_path', namespace=drone_id) 
 
@@ -133,7 +133,7 @@ class Planned_Path(Node):
             self.pp_publisher.publish(marker)
             self.index += 1 
 
-class Real_Path(Node):
+class RP_Publisher(Node):
     def __init__(self, drone_id, path, color):
         super().__init__('real_path', namespace=drone_id)
 
@@ -141,14 +141,14 @@ class Real_Path(Node):
         self.path = path
         self.color = color
 
-        self.rp_publisher = self.create_publisher(Marker, 'realpath', 700)
+        self.rp_publisher = self.create_publisher(Marker, 'realpath', 600)
 
         self.point_quantity = len(path)
         self.index = 0
 
     def publish_route(self):
         for i in range(self.point_quantity):
-            time.sleep(0.2)
+            time.sleep(0.1)
             self.publish_line()
 
         self.get_logger().info("PUBLISHED: %s" % self.point_quantity)

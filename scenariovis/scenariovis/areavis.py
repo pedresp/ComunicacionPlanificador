@@ -13,7 +13,7 @@ class AreaVis(Node):
         super().__init__('areavis')
         
         self.area_publisher = self.create_publisher(Marker, '/area_info', 10) #topic where lines are going to be send
-        self.timer_ = self.create_timer(1.0, self.publish_line)
+        self.timer_ = self.create_timer(2.0, self.publish_line)
 
         self.wps  = {} #vertex of the area 
         with open(f'/home/{pwd.getpwuid(os.getuid()).pw_name}/sim_stats/area.yaml', 'r') as y:
