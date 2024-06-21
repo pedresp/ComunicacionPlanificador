@@ -57,6 +57,9 @@ class Trajectory_Listener(Node):
         super().__init__('trajectory_listener', namespace=drone_id)
 
         self.drone_name = drone_id
+        self.print_when_reach = 10
+        self.steps = self.print_when_reach
+
         self.subscriber_ = self.create_subscription(PoseStamped, f'/{drone_id}/pose', self.write_coord, 10)
         self.file = open(f'/home/{pwd.getpwuid(os.getuid()).pw_name}/sim_stats/{drone_id}-poses.csv', 'w')
 
@@ -68,7 +71,10 @@ class Trajectory_Listener(Node):
             self.file.close()
     
     def write_coord(self, msg):
-        self.file.write(f'{msg.pose.position.x},{msg.pose.position.y},{msg.pose.position.z}\n')
+        if self.steps == self.print_when_reach:
+            self.file.write(f'{msg.pose.position.x},{msg.pose.position.y},{msg.pose.position.z}\n')
+            self.steps = 0
+        self.steps += 1
 
 def main():
     rclpy.init()
