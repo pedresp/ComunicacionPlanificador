@@ -7,24 +7,20 @@ from syst_msgs.srv import AdvService
 import time
 import numpy as np
 
-drone_id = ''
-
 class Controller(Node):
     def __init__(self):
-        global drone_id
-
         super().__init__('controller')
 
         self.cli = self.create_client(AdvService, '/advertisement_service')
-        drone_id = self.declare_parameter('drone_id', 'drone_x').get_parameter_value().string_value
-        self.wps_subscription = self.create_subscription(Waypoints, f'/{drone_id}/route', self.listener_callback, 10)
-        self.get_logger().info('lISTENING TO: "%s"' % f'/{drone_id}/route')
+        self.drone_id = self.declare_parameter('drone_id', 'drone_x').get_parameter_value().string_value
+        self.wps_subscription = self.create_subscription(Waypoints, f'/{self.drone_id}/route', self.listener_callback, 10)
+        self.get_logger().info('lISTENING TO: "%s"' % f'/{self.drone_id}/route')
 
         while not self.cli.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('service not available, waiting again...')
         self.req = AdvService.Request()
 
-        self.req.drone_id = drone_id
+        self.req.drone_id = self.drone_id
         self.req.speed = self.declare_parameter('max_speed', 30.0).get_parameter_value().double_value
         self.req.tof = self.declare_parameter('tof', 50.0).get_parameter_value().double_value
         self.req.sweep_width = self.declare_parameter('sweep_width', 33.0).get_parameter_value().double_value
@@ -47,7 +43,6 @@ class Controller(Node):
         self.get_logger().info(f'Result of service call: {response}')
 
     def listener_callback(self, msg):
-        global drone_id
         wps_array = np.array(msg.wps, dtype=np.float64).reshape((int)(len(msg.wps)/3), 3)
         self.get_logger().info(f'data received {wps_array}')
         self.send_msg(wps_array)
