@@ -10,53 +10,47 @@ from std_msgs.msg import Float64
 
 import os, pwd
 
-i = 0
-flight_height = 0
-service_active = True
-drones = []
-wps_metadata = WPS_metadata()
-
 class Station(Node):
 
     def __init__(self):
         super().__init__('Station')
         
-        global i, flight_height
-        i = self.declare_parameter('drones_quantity', 0.0).get_parameter_value().double_value
-        flight_height = self.declare_parameter('flight_height', 0.0).get_parameter_value().double_value
+        self.drones_quantity = self.declare_parameter('drones_quantity', 0.0).get_parameter_value().double_value
+        self.flight_height = self.declare_parameter('flight_height', 0.0).get_parameter_value().double_value
         self.srv = self.create_service(AdvService, '/advertisement_service', self.register_drone)
+
+        self.service_active = True
+        self.drones = []
+        self.wps_metadata = WPS_metadata()
         self.exec_time_publisher = self.create_publisher(Float64, '/execution_time', 10)
 
         self.droneslist = self.create_publisher(DronesList, '/droneslist', 10)
 
-    def register_drone(self, request, response):
-        global service_active, drones, i, wps_metadata
-        
-        if service_active:
+    def register_drone(self, request, response):       
+        if self.service_active:
             response.response = 1.0
             self.get_logger().info('Incoming request\ndrone_id: %s speed: %d tof: %d sweep_width: %d\ncoordx: %d, coordy: %d' % (request.drone_id, \
                             request.speed, request.tof, request.sweep_width, request.coordx, request.coordy))
             
-            drones.append([request.coordx, request.coordy, request.sweep_width, request.speed, request.tof])
-            wps_metadata.add_drone(Drone_initial(request.drone_id, (request.coordx, request.coordy)), request.sweep_width)
+            self.drones.append([request.coordx, request.coordy, request.sweep_width, request.speed, request.tof])
+            self.wps_metadata.add_drone(Drone_initial(request.drone_id, (request.coordx, request.coordy)), request.sweep_width)
 
-            i = i-1
-            if i == 0:
-                dl = wps_metadata.flatten_str()
+            self.drones_quantity = self.drones_quantity-1
+            if self.drones_quantity == 0:
+                dl = self.wps_metadata.flatten_str()
                 message = DronesList()
                 message.droneslist = dl 
                 self.droneslist.publish(message)
                 
-                service_active = False
+                self.service_active = False
                 self.publish_wps()
             return response
         response.response = 0.0
         return response
     
     def publish_wps(self):
-        global drones, wps_metadata, flight_height
         self.get_logger().info('La ruta es : %s' % os.getcwd())
-        wps, exec_time = planning_algorithm(drones, os.path.join(os.getcwd(), 'install/planner/share/planner/config/perimeter.yaml'), wps_metadata.flatten_str())
+        wps, exec_time = planning_algorithm(self.drones, os.path.join(os.getcwd(), 'install/planner/share/planner/config/perimeter.yaml'), self.wps_metadata.flatten_str())
         self.get_logger().info('Execution time was: %f' % exec_time)
 
         execution_time = Float64()
@@ -65,8 +59,8 @@ class Station(Node):
 
         index = 0
 
-        drones_names = wps_metadata.flatten()
-        proccesed_wps = process_wps(wps, flight_height)
+        drones_names = self.wps_metadata.flatten()
+        proccesed_wps = process_wps(wps, self.flight_height)
 
         for list_array_2d in proccesed_wps:
             for array_2d in list_array_2d:
