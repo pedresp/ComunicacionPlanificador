@@ -13,8 +13,6 @@ class Listener_Manager(Node):
 
         self.subscriber_ = self.create_subscription(DronesList, '/droneslist', self.spawn_listeners, 10)
 
-        rclpy.get_default_context().on_shutdown(self.close_file)
-
     def spawn_listeners(self, msg):
         self.get_logger().info("spawn activated !!!!!")
         mt_executor = MultiThreadedExecutor()
@@ -40,17 +38,6 @@ class Listener_Manager(Node):
                 tl.close_file()
                 tl.destroy_node()
             mt_executor.shutdown()
-
-    def close_file(self):
-        self.get_logger().info('CERRANDO ARCHIVOOOOOOOOOOOOOOOOOOOO')
-        #if not self.file.closed:
-        #    self.get_logger().info('ACHIVOOOOOOO CERRADO')
-        #    self.file.close()
-
-    def write_coord(self, msg):
-        self.get_logger().info("Activado callback")
-
-        self.file.write(f'{msg.pose.position.x},{msg.pose.position.y},{msg.pose.position.z}\n')
 
 class Trajectory_Listener(Node):
     def __init__(self, drone_id):
@@ -82,7 +69,7 @@ def main():
     try:
         rclpy.spin(lm)
     except KeyboardInterrupt:
-        lm.close_file() 
+        pass 
     finally:
         lm.destroy_node()
         if rclpy.ok():

@@ -31,10 +31,12 @@ class Planner_Monitor(Node):
         self.drones_quantity -= 1
 
         if self.drones_quantity == 0:
+            self.get_logger().info("starting creation of aftersim metrics file")
             with open(f"{route}/after_simulation_metrics.csv", "w") as fin:
               fin.write(f"algorithm_execution_time,{exec_time}\n\nUAV,Total time,Total distance\n") 
               for elem in self.drones_received:
                   fin.write(f"{elem[0]},{elem[1]},{elem[2]}\n")
+            self.get_logger().info("finished creation of aftersim metrics file")
 
 def main():
     rclpy.init()
