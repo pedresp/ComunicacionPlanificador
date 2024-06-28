@@ -17,7 +17,7 @@ def get_score(total_area, scan_width, velocity, remaining_batt_time):
     score=remaining_batt_time/(scan_time)
 
     with open(f'/home/{pwd.getpwuid(os.getuid()).pw_name}/sim_stats/scores.txt', 'a') as file:
-        file.write(f'scan: {scan_width}  velocity: {velocity} remaining_batt: {remaining_batt_time}  score: {score}\n')
+       file.write(f'scan: {scan_width}  velocity: {velocity} remaining_batt: {remaining_batt_time}  score: {score}\n')
     return score
 
 

@@ -59,14 +59,15 @@ def planning_algorithm(drones, path_to_area_coord: str, drones_names: list[str])
     convex_limits=convex_hull_fun(limits)
     sim_stats_f = f'/home/{pwd.getpwuid(os.getuid()).pw_name}/sim_stats/'
     files = os.listdir(sim_stats_f)
-    files.remove('area.yaml')
+    if 'area.yaml' in files:
+        files.remove('area.yaml')
     for file in files: 
         os.remove(sim_stats_f + file)
 
     start=time.time()
     total_area=get_polygon_area(convex_limits)
 
-    estimate_new_battery(UAVs, convex_limits)
+    #estimate_new_battery(UAVs, convex_limits)
     scores=get_UAV_score_list(UAVs, total_area)
 
     #UAV score dictionary
