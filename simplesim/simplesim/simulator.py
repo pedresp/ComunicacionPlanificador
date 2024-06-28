@@ -71,6 +71,8 @@ class Publisher(Node):
         super().__init__('simulator')
 
         self.publisher_ = self.create_publisher(PoseStamped, 'pose', 1)
+        self.results_publisher = self.create_publisher(DroneResults,'/drone_results', 10)
+
 
         MAX_SPEED = self.declare_parameter(
             'max_speed', 20.0).get_parameter_value().double_value
@@ -92,7 +94,7 @@ class Publisher(Node):
         using Pose messages
         """
 
-        global wps_to_travel
+        global wps_to_travel, DRONE_ID
 
         time.sleep(1)
         # Calculate direction of first waypoint
@@ -115,7 +117,14 @@ class Publisher(Node):
             current_wp = self.overtake(current_wp, subsequent)
         self.finish(current_wp, wps_to_travel[-1]) # Last point
 
-        results_publisher = ResultsPublisher(TIME_SPENT, TOTAL_DISTANCE)
+        dr = DroneResults()
+        dr.drone_id = DRONE_ID
+        dr.total_time = TIME_SPENT
+        dr.total_distance = TOTAL_DISTANCE
+        self.get_logger().info('RESULTS SENT {DRONE_ID}')
+
+        self.results_publisher.publish(dr)
+        #results_publisher = ResultsPublisher(TIME_SPENT, TOTAL_DISTANCE)
         # rclpy.spin_once(results_publisher)
         # results_publisher.destroy_node()
 
@@ -453,7 +462,7 @@ class ResultsPublisher(Node):
     def __init__(self, t_time, t_distance):
         super().__init__('results_publisher')
 
-        self.publisher_ = self.create_publisher(DroneResults,'/drone_results', 1)
+        self.publisher_ = self.create_publisher(DroneResults,'/drone_results', 10)
 
         global DRONE_ID
         
