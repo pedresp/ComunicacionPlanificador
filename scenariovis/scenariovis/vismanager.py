@@ -137,6 +137,7 @@ class RP_Publisher(Node):
     def __init__(self, drone_id, path, color):
         super().__init__('real_path', namespace=drone_id)
 
+        self.get_logger().info('drone: %s has collor %s' % (drone_id, color))
         self.drone_id = drone_id
         self.path = path
         self.color = color

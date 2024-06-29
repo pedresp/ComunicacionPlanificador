@@ -5,16 +5,16 @@ from geometry_msgs.msg import Point
 
 import time
 
-class PlaneWithGridPublisher(Node):
+class W_Plane(Node):
     def __init__(self):
-        super().__init__('plane_with_grid_publisher')
-        self.publisher_ = self.create_publisher(Marker, 'walls', 10)
+        super().__init__('walls')
+        self.plane_publisher = self.create_publisher(Marker, 'walls', 10)
         self.get_logger().info('PREPARING WALL')
         time.sleep(3)
-        self.publish_markers(0, [-27.5, 200.1, 50.0], [345.0, 0.01, 100.0])
-        self.publish_markers(1, [145.1, 50.0, 50.0], [0.01, 300.0, 100.0])
+        self.publish_walls(0, [-27.5, 200.1, 50.0], [345.0, 0.01, 100.0])
+        self.publish_walls(1, [145.1, 50.0, 50.0], [0.01, 300.0, 100.0])
 
-    def publish_markers(self, wid, posit, wide):
+    def publish_walls(self, wid, posit, wide):
         # Crear el marcador de plano
         plane_marker = Marker()
         plane_marker.header.frame_id = "map"
@@ -38,7 +38,7 @@ class PlaneWithGridPublisher(Node):
         plane_marker.color.b = 1.0  # Componente azul
         plane_marker.color.a = 1.0  # Opacidad (0.5 es semi-opaco)
 
-        self.publisher_.publish(plane_marker)
+        self.plane_publisher.publish(plane_marker)
 
         # Crear el marcador de cuadrícula
 #        grid_marker = Marker()
@@ -89,9 +89,9 @@ class PlaneWithGridPublisher(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    plane_with_grid_publisher = PlaneWithGridPublisher()
-    rclpy.spin(plane_with_grid_publisher)
-    plane_with_grid_publisher.destroy_node()
+    walls = W_Plane()
+    rclpy.spin(walls)
+    walls.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':

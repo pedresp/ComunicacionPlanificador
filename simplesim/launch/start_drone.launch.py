@@ -75,7 +75,7 @@ def generate_launch_description():
         namespace=drone_id,
         package='simplesim',
         executable='wp_vis',
-        name='wps'
+        name='wp_visualizer'
     )
 
     return launch.LaunchDescription([

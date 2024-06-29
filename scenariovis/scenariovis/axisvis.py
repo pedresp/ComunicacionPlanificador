@@ -12,7 +12,7 @@ class AxisVis(Node):
     def __init__(self):
         super().__init__('axisvis')
         
-        self.x= self.create_publisher(Marker, 'xview', 30) #topic where lines are going to be send
+        self.axis_publisher= self.create_publisher(Marker, 'xview', 30) #topic where lines are going to be send
         self.ident= 1
 
         time.sleep(2)
@@ -59,7 +59,7 @@ class AxisVis(Node):
         marker.color.b = 0.0
         marker.color.a = 1.0
 
-        self.x.publish(marker)
+        self.axis_publisher.publish(marker)
     def publish_line(self, i, wps, pwps):
         time.sleep(0.5)
         self.get_logger().info('Timer called')
@@ -112,7 +112,7 @@ class AxisVis(Node):
         marker.scale.y = 0.3
         marker.scale.z = pv_module
 
-        self.x.publish(marker)
+        self.axis_publisher.publish(marker)
 
 def main():
     rclpy.init()

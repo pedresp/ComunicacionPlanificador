@@ -37,7 +37,6 @@ def generate_launch_description():
     walls = launch_ros.actions.Node(
         package="scenariovis",
         executable="walls",
-        name="walls"
     )
 
     visman = launch_ros.actions.Node(
