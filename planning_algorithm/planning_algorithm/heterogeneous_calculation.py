@@ -29,8 +29,6 @@ def get_UAV_score_list(UAV, total_area):
         #print(score)
 
     sum_score = sum(score_list)
-    with open('/home/gondolior/Vault/scores.txt', 'a') as file:
-        file.write(f'total score: {sum_score}\n')
     if sum_score < 1:
         error_message = f'score -> {sum_score} is less than 1, it could not be able to fulfill the mission with the current battery values.'
         raise InsufficientBattery(error_message)

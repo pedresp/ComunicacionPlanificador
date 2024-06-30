@@ -50,7 +50,7 @@ class Station(Node):
     
     def publish_wps(self):
         self.get_logger().info('La ruta es : %s' % os.getcwd())
-        wps, exec_time = planning_algorithm(self.drones, os.path.join(os.getcwd(), 'install/planner/share/planner/config/perimeter.yaml'), self.wps_metadata.flatten_str())
+        wps, exec_time = planning_algorithm(self.drones, os.path.join(os.getcwd(), 'install/planner/share/planner/config/perimeter.yaml'), self.wps_metadata.flatten_str(), self.flight_height)
         self.get_logger().info('Execution time was: %f' % exec_time)
 
         execution_time = Float64()

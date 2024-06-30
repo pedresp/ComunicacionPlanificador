@@ -40,7 +40,7 @@ import pwd
 #    UAVs = []
 #    for row in reader:
 #        UAVs.append(row[:])
-def planning_algorithm(drones, path_to_area_coord: str, drones_names: list[str]):
+def planning_algorithm(drones, path_to_area_coord: str, drones_names: list[str], height):
     #UAVs = readUAV()
     UAVs = drones
 
@@ -67,7 +67,8 @@ def planning_algorithm(drones, path_to_area_coord: str, drones_names: list[str])
     start=time.time()
     total_area=get_polygon_area(convex_limits)
 
-    #estimate_new_battery(UAVs, convex_limits)
+    #select estimation method
+    #execute_estimation(UAVs, convex_limits, height, method="TFC075")
     scores=get_UAV_score_list(UAVs, total_area)
 
     #UAV score dictionary
