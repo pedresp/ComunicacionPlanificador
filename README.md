@@ -25,7 +25,6 @@ cd ~/ros_tfg/
 git clone https://github.com/pedresp/ComunicacionPlanificador.git
 mv ComunicacionPlanificador/ src/
 
-cd ..
 rosdep install -i --from-path src --rosdistro humble -y
 ```
 
