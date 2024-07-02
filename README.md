@@ -10,19 +10,28 @@ la memoria asociada con este proyecto.
 
 ## Cómo usar
 
+El tutorial supone que el usuario tiene instalada la herramienta ROS2 en su vesión
+Humble Hawksbill y están usando el sistema operativo Ubuntu 22.04 LTS.
+
 Para hacer uso del entorno es recomendable usar la herramienta 
 [DSUT](https://github.com/pedresp/DSUT).
 
 En primer lugar se debe crear un workspace ROS2 e importar el repositorio:
 
 ```bash
-mkdir -p ~/ros_tfg/src
-cd ~/ros_tfg/src
+mkdir ~/ros_tfg
+cd ~/ros_tfg/
 
 git clone https://github.com/pedresp/ComunicacionPlanificador.git
+mv ComunicacionPlanificador/ src/
 
 cd ..
 rosdep install -i --from-path src --rosdistro humble -y
+```
+
+Después se debe comprobar que estén todas las librerías necesarias instaladas:
+```bash
+pip install -r ~/ros_tfg/src/requirements.txt
 ```
 
 Posteriormente se debe ejecutar y generar la configuración deseada tal y cómo se 

@@ -1,0 +1,9 @@
+matplotlib
+python-time
+numpy
+python-math
+py2d-fixed
+scipy
+pode
+
+pyclothoids
